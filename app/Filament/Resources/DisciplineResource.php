@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\Concerns\HasForm;
+use App\Filament\Resources\DisciplineRescource\Forms\DisciplineForm;
 use App\Filament\Resources\DisciplineResource\Pages;
 use App\Filament\Resources\DisciplineResource\RelationManagers;
 use App\Models\Discipline;
@@ -21,11 +23,7 @@ class DisciplineResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required(),
-            ]);
+        return $form->schema(DisciplineForm::fields());
     }
 
     public static function table(Table $table): Table
