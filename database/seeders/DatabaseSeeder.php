@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        if (!env('APP_ENV') === 'production') {
+        if (env('APP_ENV') !== 'production') {
             Work::factory(3)
                 ->hasAttached(
                     Technology::factory()

@@ -22,6 +22,7 @@ class DisciplineFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'slug' => Str::slug($this->faker->name()),
         ];
     }
 }

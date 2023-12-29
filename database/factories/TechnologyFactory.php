@@ -23,6 +23,7 @@ class TechnologyFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'slug' => Str::slug($this->faker->name()),
             'discipline_id' => Discipline::factory(),
         ];
     }
