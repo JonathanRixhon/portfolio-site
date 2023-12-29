@@ -11,15 +11,6 @@ class Discipline extends Model
 {
     use HasFactory, HasUuids;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-    ];
-
     public function technologies(): HasMany
     {
         return $this->hasMany(Technology::class);

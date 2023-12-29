@@ -2,16 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TechnologyResource\Pages;
-use App\Filament\Resources\TechnologyResource\RelationManagers;
-use App\Models\Technology;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\Technology;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Resources\Resource;
+use App\Filament\Resources\TechnologyResource\Pages;
+use App\Filament\Resources\TechnologyResource\Forms\TechnologyForm;
 
 class TechnologyResource extends Resource
 {
@@ -22,21 +19,13 @@ class TechnologyResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required(),
-                Forms\Components\Select::make('discipline_id')
-                    ->relationship('discipline', 'name')
-                    ->required(),
-            ]);
+            ->schema(TechnologyForm::fields());
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('discipline.name')
@@ -55,7 +44,8 @@ class TechnologyResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->slideOver(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -76,7 +66,7 @@ class TechnologyResource extends Resource
         return [
             'index' => Pages\ListTechnologies::route('/'),
             'create' => Pages\CreateTechnology::route('/create'),
-            'edit' => Pages\EditTechnology::route('/{record}/edit'),
+            //'edit' => Pages\EditTechnology::route('/{record}/edit'),
         ];
     }
 }

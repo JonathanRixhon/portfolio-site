@@ -15,8 +15,10 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('slug');
-            $table->foreignId('discipline_id');
+            $table->uuid('discipline_id');
             $table->timestamps();
+
+            $table->foreign('discipline_id')->references('id')->on('disciplines')->onDelete('cascade');
         });
     }
 
