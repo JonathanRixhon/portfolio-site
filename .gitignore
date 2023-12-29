@@ -44,3 +44,5 @@ thumbs.db
 /resources/icons/_optimized
 composer.local.json
 /resources/img/animations
+/draft.yaml
+/.blueprint
