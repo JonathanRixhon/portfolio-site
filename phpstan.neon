@@ -1,0 +1,26 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 9 is the highest level
+    level: 5
+
+#    ignoreErrors:
+#        - '#PHPDoc tag @var#'
+#        - '#Call to an undefined static method .*#'
+#        - '#Call to an undefined method .*#'
+#        - '#Access to an undefined property Illuminate\\Database\\Eloquent\\Model::.*#'
+#        - '#Access to an undefined property App\\Hiker\\Resources\\.*::\$.*#'
+#        - '#Access to an undefined property App\\Models\\.*::\$.*#'
+#        - '#PHPDoc type array of property App\\Models\\.*::\$.* is not covariant with PHPDoc type .* of overridden property Illuminate\\Database\\Eloquent\\Model::\$.*#'
+#        - '#PHPDoc type array of property App\\Models\\.*\$.* is not covariant with PHPDoc type .* of overridden property Illuminate\\Database\\Eloquent\\Model.*\$fillable#'
+#        - '#Access to an undefined property App\\.*\\User\:\:\$.*#'
+
+#    excludePaths:
+#        - ./*/*/FileToBeExcluded.php
+#
+#    checkMissingIterableValueType: false
