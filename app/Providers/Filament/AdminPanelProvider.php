@@ -15,6 +15,7 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Navigation\NavigationBuilder;
 use App\Filament\Resources\CompanyResource;
 use App\Filament\Resources\DisciplineResource;
+use App\Filament\Resources\PageResource;
 use App\Filament\Resources\TechnologyResource;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -69,6 +70,7 @@ class AdminPanelProvider extends PanelProvider
                             ->isActiveWhen(fn () => request()->routeIs('filament.admin.pages.dashboard'))
                             ->url(fn () => Dashboard::getUrl()),
                         ...WorkResource::getNavigationItems(),
+                        ...PageResource::getNavigationItems(),
                     ])
                     ->groups([
                         NavigationGroup::make('Secondary')
