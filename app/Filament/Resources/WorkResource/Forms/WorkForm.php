@@ -3,14 +3,15 @@
 namespace App\Filament\Resources\TechnologyResource\Forms;
 
 use Filament\Forms\Components\Group;
-use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use App\Filament\Resources\DisciplineRescource\Forms\CompanyForm;
 
 class WorkForm extends Form
 {
@@ -33,6 +34,12 @@ class WorkForm extends Form
                         self::slugField('name'),
                         Toggle::make('featured')
                             ->required(),
+                        Select::make('company_id')
+                            ->relationship('company', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->createOptionForm(CompanyForm::fields())
+                            ->editOptionForm(CompanyForm::fields())
                     ]),
                     Textarea::make('description')
                         ->required()

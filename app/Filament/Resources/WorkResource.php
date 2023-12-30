@@ -45,6 +45,8 @@ class WorkResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('technologies.name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('company.name')
+                    ->searchable(),
                 Tables\Columns\IconColumn::make('featured')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
@@ -87,6 +89,10 @@ class WorkResource extends Resource
                                 TextEntry::make('description')
                                     ->columnSpanFull()
                                     ->html(),
+                                TextEntry::make('company.name')
+                                    ->url(fn ($record) => $record->company->url, true),
+                                IconEntry::make('featured')
+                                    ->boolean(),
                                 TextEntry::make('disciplines')
                                     ->getStateUsing(fn ($record) => $record->disciplines->pluck('name'))
                                     ->bulleted()
@@ -94,8 +100,6 @@ class WorkResource extends Resource
                                 TextEntry::make('technologies.name')
                                     ->bulleted()
                                     ->listWithLineBreaks(),
-                                IconEntry::make('featured')
-                                    ->boolean(),
                             ]),
                     ]),
                 Section::make('Body')
