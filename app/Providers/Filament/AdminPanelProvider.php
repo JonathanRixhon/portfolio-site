@@ -6,7 +6,9 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
+use Filament\Pages\Dashboard;
 use Filament\Support\Colors\Color;
+use Filament\Navigation\NavigationItem;
 use App\Filament\Resources\WorkResource;
 use Filament\Navigation\NavigationGroup;
 use Filament\Http\Middleware\Authenticate;
@@ -31,7 +33,6 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->topbar(true)
             ->path('admin')
             ->login()
             ->colors([
@@ -61,18 +62,22 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])->navigation(function (NavigationBuilder $builder): NavigationBuilder {
-                return $builder->groups([
-                    NavigationGroup::make('Main')
-                        ->items([
-                            ...WorkResource::getNavigationItems(),
-                        ]),
-                    NavigationGroup::make('Secondary')
-                        ->items([
-                            ...CompanyResource::getNavigationItems(),
-                            ...TechnologyResource::getNavigationItems(),
-                            ...DisciplineResource::getNavigationItems(),
-                        ]),
-                ]);
+                return $builder
+                    ->items([
+                        NavigationItem::make('Dashboard')
+                            ->icon('heroicon-o-home')
+                            ->isActiveWhen(fn () => request()->routeIs('filament.admin.pages.dashboard'))
+                            ->url(fn () => Dashboard::getUrl()),
+                        ...WorkResource::getNavigationItems(),
+                    ])
+                    ->groups([
+                        NavigationGroup::make('Secondary')
+                            ->items([
+                                ...CompanyResource::getNavigationItems(),
+                                ...TechnologyResource::getNavigationItems(),
+                                ...DisciplineResource::getNavigationItems(),
+                            ]),
+                    ]);
             });
     }
 }
