@@ -22,6 +22,7 @@ abstract class Form
     {
         return TextInput::make('slug')
             ->disabled()
+            ->dehydrated()
             ->rules(['alpha_dash'])
             ->maxLength(255)
             ->helperText('This field is automatically generated from the ' . $sluggable . ' field.')

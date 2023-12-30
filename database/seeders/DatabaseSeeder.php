@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Work;
 use App\Models\Technology;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -31,5 +32,22 @@ class DatabaseSeeder extends Seeder
             'email' => env('ADMIN_EMAIL'),
             'password' => bcrypt(env('ADMIN_PASSWORD')),
         ]);
+
+        \App\Models\Discipline::create([
+            'name' => 'Backend development',
+            'slug' => Str::slug('Backend development'),
+        ]);
+
+        \App\Models\Discipline::create([
+            'name' => 'Frontend development',
+            'slug' => Str::slug('Frontend development'),
+        ]);
+
+        \App\Models\Discipline::create([
+            'name' => 'Web design',
+            'slug' => Str::slug('Web design'),
+        ]);
+
+
     }
 }

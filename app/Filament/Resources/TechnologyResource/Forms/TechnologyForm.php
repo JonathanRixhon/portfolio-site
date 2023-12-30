@@ -16,8 +16,6 @@ class TechnologyForm extends Form
 {
     public static function fields(): array
     {
-
-
         return [
             self::titleField(TextInput::make('name'))
                 ->required(),
