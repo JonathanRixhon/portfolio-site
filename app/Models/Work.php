@@ -2,15 +2,16 @@
 
 namespace App\Models;
 
+use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Work extends Model
+class Work extends Model implements HasMedia
 {
-    use HasFactory, HasUuids;
-
+    use HasFactory, HasUuids, InteractsWithMedia;
     /**
      * The attributes that should be cast to native types.
      *
