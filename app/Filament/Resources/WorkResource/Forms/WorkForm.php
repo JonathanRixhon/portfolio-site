@@ -2,21 +2,15 @@
 
 namespace App\Filament\Resources\TechnologyResource\Forms;
 
-use Closure;
-use Filament\Forms\Get;
-use Filament\Forms\Set;
-use Illuminate\Support\Str;
-use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use App\Filament\Resources\DisciplineRescource\Forms\DisciplineForm;
-use Filament\Forms\Components\Group;
 use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\Section;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class WorkForm extends Form
 {
@@ -50,7 +44,6 @@ class WorkForm extends Form
                         ->preload()
                         ->multiple()
                         ->createOptionForm(TechnologyForm::fields())
-                        ->editOptionForm(TechnologyForm::fields())
                         ->required(),
                 ]),
             Section::make('Content')
