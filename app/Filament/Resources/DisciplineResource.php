@@ -19,7 +19,7 @@ class DisciplineResource extends Resource
 {
     protected static ?string $model = Discipline::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-puzzle-piece';
 
     public static function form(Form $form): Form
     {

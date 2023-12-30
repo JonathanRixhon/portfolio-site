@@ -8,13 +8,14 @@ use App\Models\Technology;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use App\Filament\Resources\TechnologyResource\Pages;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use App\Filament\Resources\TechnologyResource\Forms\TechnologyForm;
 
 class TechnologyResource extends Resource
 {
     protected static ?string $model = Technology::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-code-bracket';
 
     public static function form(Form $form): Form
     {
@@ -26,7 +27,10 @@ class TechnologyResource extends Resource
     {
         return $table
             ->columns([
+                SpatieMediaLibraryImageColumn::make('thumbnail')
+                    ->collection('thumbnails'),
                 Tables\Columns\TextColumn::make('name')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('discipline.name')
                     ->numeric()

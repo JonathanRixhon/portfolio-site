@@ -42,6 +42,10 @@ class TechnologyForm extends Form
                             ->createOptionForm(DisciplineForm::fields())
                             ->editOptionForm(DisciplineForm::fields()),
                     ]),
+                    TextInput::make('url')
+                        ->url()
+                        ->columnSpanFull()
+                        ->nullable(),
                 ])
         ];
     }

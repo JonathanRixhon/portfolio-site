@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('works', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->text('description');
             $table->longText('body');
             $table->boolean('featured');
