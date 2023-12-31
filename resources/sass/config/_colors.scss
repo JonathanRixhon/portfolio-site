@@ -1,0 +1,29 @@
+$primary: #edb01f;
+$secondary: #6298d4;
+$dark-50: #fafaf9;
+$dark-200: #f5f5f4;
+$dark-100: #e7e5e4;
+$dark-400: #d6d3d1;
+$dark-300: #a8a29e;
+$dark-600: #78716c;
+$dark-500: #57534e;
+$dark-800: #44403c;
+$dark-700: #292524;
+$dark-950: #1c1917;
+$dark-900: #0c0a09;
+
+:root {
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --dark-50: #{$dark-50};
+    --dark-200: #{$dark-200};
+    --dark-100: #{$dark-100};
+    --dark-400: #{$dark-400};
+    --dark-300: #{$dark-300};
+    --dark-600: #{$dark-600};
+    --dark-500: #{$dark-500};
+    --dark-800: #{$dark-800};
+    --dark-700: #{$dark-700};
+    --dark-950: #{$dark-950};
+    --dark-900: #{$dark-900};
+}

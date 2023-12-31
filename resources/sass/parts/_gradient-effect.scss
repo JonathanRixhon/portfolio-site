@@ -1,0 +1,67 @@
+@use "../config/colors" as colors;
+
+.gradient-effect {
+    overflow: hidden;
+    width: 100%;
+    background-color: colors.$dark-50;
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        opacity: 0.5;
+        background: url(../img/noise.png) repeat;
+        mix-blend-mode: overlay;
+    }
+
+    &__gradient {
+        position: absolute;
+        opacity: 0.4;
+        display: block;
+        filter: blur(10vw);
+        z-index: -1;
+    }
+
+    &__gradient-1 {
+        top: 0;
+        right: 0;
+        transform: translate(80%, -60%) rotate(47.901deg);
+        width: 35.9027777778vw; //517px
+        ellipse {
+            fill: colors.$primary;
+        }
+    }
+
+    &__gradient-2 {
+        width: 30vw; //432px
+        top: 80vh;
+        left: 0;
+        transform: translate(-50%, -50%) rotate(105deg);
+        ellipse {
+            fill: colors.$primary;
+        }
+    }
+
+    &__gradient-3 {
+        width: 30vw; //432px
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -50%) rotate(90deg);
+        ellipse {
+            fill: colors.$secondary;
+        }
+    }
+}

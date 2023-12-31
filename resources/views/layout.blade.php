@@ -20,16 +20,38 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"> --}}
     <!-- ASSETS -->
+
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="layout">
+    <div class="gradient-effect" aria-hidden="true">
+        <svg class="gradient-effect__gradient gradient-effect__gradient-1" viewBox="0 0 517 1891" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="258.498" cy="945.049" rx="258.498" ry="945.049" />
+        </svg>
+        <svg class="gradient-effect__gradient gradient-effect__gradient-2" viewBox="0 0 517 1891" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="258.498" cy="945.049" rx="258.498" ry="945.049" />
+        </svg>
+        <svg class="gradient-effect__gradient gradient-effect__gradient-3" viewBox="0 0 517 1891" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="258.498" cy="945.049" rx="258.498" ry="945.049" />
+        </svg>
+    </div>
+
     <x-header :$page />
 
     <main class="main">
         @yield('content')
     </main>
 
-    <x-footer />
+    {{-- <x-footer /> --}}
 </body>
 
 </html>

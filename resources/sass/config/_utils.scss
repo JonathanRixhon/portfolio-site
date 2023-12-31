@@ -1,0 +1,33 @@
+@use "mixins";
+@use "colors";
+@use "sizes";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "inter", sans-serif;
+    font-size: sizes.$l;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: colors.$dark-700;
+
+    @media (max-width: sizes.$bp-s) {
+        font-size: sizes.$m;
+    }
+}
+
+.wrapper {
+    width: 85.7142857143%;
+    max-width: sizes.$grid-width;
+    margin: 0 auto;
+}
+
+.sro {
+    @include mixins.hidden();
+}
