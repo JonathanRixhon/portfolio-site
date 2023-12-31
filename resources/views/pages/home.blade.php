@@ -1,7 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <x-hero :hero="$page->content['hero']" />
-    <x-featured-works :works="$page->content['works']"/>
-    <x-about :about="$page->content['about']"/>
+    <x-hero :content="$page->content['hero']" />
+    <x-featured-works :content="$page->content['works']"/>
+    <x-about :content="$page->content['about']"/>
+    <x-skills :content="$page->content['skills']"/>
+    <x-contact :content="$page->content['contact']"/>
 @endsection

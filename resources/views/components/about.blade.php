@@ -1,6 +1,6 @@
 <section class="about">
-    <h2 class="about__title">{{ $about['title'] }}</h2>
+    <h2 class="about__title">{{ $content['title'] }}</h2>
     <div class="wysiwyg">
-        {!! $about['body'] !!}
+        {!! $content['body'] !!}
     </div>
 </section>

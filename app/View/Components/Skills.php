@@ -2,16 +2,16 @@
 
 namespace App\View\Components;
 
-use App\Models\Work;
 use Closure;
+use App\Models\Discipline;
+use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\View\Component;
 
-class FeaturedWorks extends Component
+class Skills extends Component
 {
     public array $content;
-    public Collection $featured;
+    public Collection $disciplines;
 
     /**
      * Create a new component instance.
@@ -19,7 +19,7 @@ class FeaturedWorks extends Component
     public function __construct(array $content = [])
     {
         $this->content = $content;
-        $this->featured = Work::where('featured', true)->get();
+        $this->disciplines = Discipline::with('Technologies')->get();
     }
 
     /**
@@ -27,6 +27,6 @@ class FeaturedWorks extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.featured-works');
+        return view('components.skills');
     }
 }
