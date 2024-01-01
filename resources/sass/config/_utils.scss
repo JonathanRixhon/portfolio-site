@@ -32,3 +32,29 @@ body {
 .sro {
     @include mixins.hidden();
 }
+
+.wysiwyg {
+    line-height: 1.5;
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-bottom: sizes.$gap;
+    }
+
+    a {
+        color: colors.$primary;
+        text-decoration: none;
+    }
+
+    ul {
+        margin-bottom: sizes.$gap;
+        padding-left: sizes.$gap;
+
+        li {
+            margin-bottom: sizes.$gap / 2;
+        }
+    }
+}
