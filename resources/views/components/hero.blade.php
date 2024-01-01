@@ -6,7 +6,7 @@
                 <span class="hero__big">{{ $content['job'] }}</span>
             </h2>
             <p class="hero__subtitle">{{ $content['subtitle'] }}</p>
-            <a href="#" class="button button--big button--primary">{{ $content['cta'] }}</a>
+            <a href="#" class="button">{{ $content['cta'] }}</a>
         </div>
         <figure class="hero__fig">
             <img class="hero__img" src="{{ asset(Storage::url($content['image'])) }}" alt="Image of Jonathan">

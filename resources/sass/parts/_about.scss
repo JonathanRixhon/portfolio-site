@@ -2,7 +2,6 @@
 @use "../config/sizes" as sizes;
 
 .about {
-
     margin: 0 auto sizes.$spacer * 20;
 
     &__container {
@@ -24,7 +23,7 @@
     }
 
     &__title {
-        font-size: sizes.$xl;
+        font-size: sizes.$xxl;
         font-weight: 700;
         margin: sizes.$gap 0 sizes.$gap;
     }

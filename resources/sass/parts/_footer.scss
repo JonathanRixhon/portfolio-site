@@ -1,0 +1,39 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.footer {
+    &__container {
+        padding: sizes.$gap;
+        width: 66%;
+        margin: 0 auto;
+        border-top: 1px solid colors.$dark-700;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+    }
+
+    &__home-link, &__mailto, &__link {
+        display: block;
+        text-decoration: none;
+        color: colors.$dark-700;
+    }
+
+    &__home-link {
+        font-weight: 700;
+        margin-bottom: sizes.$spacer;
+    }
+
+    &__mailto {
+        font-size: sizes.$s;
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        gap: sizes.$spacer;
+    }
+
+    &__link{
+        font-size: sizes.$s;
+    }
+}

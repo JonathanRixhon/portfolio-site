@@ -16,7 +16,6 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     color: colors.$dark-700;
-    background-color: red;
 
     @media (max-width: sizes.$bp-s) {
         font-size: sizes.$m;

@@ -1,0 +1,28 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.contact {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: sizes.$gap * 3 0;
+        width: 66%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: sizes.$xxxl;
+        font-weight: 700;
+        margin-bottom: sizes.$gap * 2;
+    }
+
+    &__body {
+        text-align: center;
+        font-size: sizes.$xl;
+        margin-bottom: sizes.$gap * 2;
+    }
+}
