@@ -1,0 +1,66 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.work-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto sizes.$spacer * 9;
+    width: 66%;
+
+    &__title {
+        font-size: sizes.$xl;
+        font-weight: 700;
+        margin: sizes.$gap 0 sizes.$spacer;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        text-indent: -99999px;
+        font-size: 0;
+    }
+
+    &__link:hover ~ &__fig &__img {
+        transform: scale(1.01);
+    }
+
+    &__fig {
+        padding: sizes.$spacer * 8;
+        width: 100%;
+        height: auto;
+        background-color: colors.$dark-50;
+        border-radius: sizes.$spacer;
+        order: -1;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        border-radius: sizes.$spacer;
+
+        transition: all 0.2s ease;
+    }
+
+    &__disciplines {
+        display: flex;
+    }
+
+    &__discipline {
+        font-size: sizes.$xs;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        & + & {
+            &::before {
+                content: "/";
+                margin: 0.5ch;
+            }
+        }
+    }
+}

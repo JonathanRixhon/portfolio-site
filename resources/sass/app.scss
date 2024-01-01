@@ -5,9 +5,11 @@
 @use "config/mixins";
 @use "config/utils";
 
+@use "parts/button";
 @use "parts/nav";
 @use "parts/gradient-effect";
 @use "parts/hero";
-@use "parts/button";
+@use "parts/featured-works";
+@use "parts/work-card";
 
 

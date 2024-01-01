@@ -1,0 +1,18 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.featured-works {
+    margin-bottom: sizes.$spacer * 20;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto sizes.$spacer * 4;
+        width: 66%;
+    }
+
+    &__title {
+        font-size: sizes.$xxl;
+        font-weight: 700;
+    }
+}
