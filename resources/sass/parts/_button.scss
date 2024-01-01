@@ -1,0 +1,27 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.button {
+    background-color: colors.$primary;
+    padding: sizes.$s;
+    font-size: sizes.$s;
+    font-weight: 700;
+    color: colors.$dark-700;
+    text-decoration: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    width: 15%;
+    min-width: 11.25rem;
+    display: block;
+    text-align: center;
+
+    position: relative;
+
+    box-shadow: 8px 8px 0px 0px #3F3F46;
+
+    transition: box-shadow 150ms ease;
+
+    &:hover {
+        box-shadow: 0px 0px 0px 0px #3F3F46;
+    }
+}

@@ -1,0 +1,83 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__container {
+        display: flex;
+        min-height: 80vh;
+        padding: sizes.$spacer * 10 0;
+        gap: 8.5%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        width: 61%;
+        max-width: 384px;
+    }
+
+    &__small {
+        display: block;
+        margin-bottom: sizes.$spacer;
+    }
+
+    &__big {
+        display: block;
+        font-size: sizes.$xxxl;
+        font-weight: 700;
+        margin-bottom: sizes.$spacer;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: sizes.$s;
+        margin-bottom: sizes.$spacer * 4;
+    }
+
+    &__fig {
+        order: -1;
+        padding: 2%;
+        border: 1px solid colors.$primary;
+        border-radius: 100vh;
+
+        width: 27.5%;
+    }
+
+    &__img {
+        display: block;
+        border-radius: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: sizes.$bp-s) {
+        &__container {
+            flex-direction: column;
+            justify-content: flex-start;
+            height: auto;
+            min-height: initial;
+            padding: sizes.$gap * 2 0;
+            gap: sizes.$gap * 2;
+        }
+
+        &__text {
+            width: 100%;
+            text-align: center;
+
+            .button {
+                margin: 0 auto;
+            }
+        }
+
+        &__big {
+            font-size: sizes.$xxl;
+        }
+
+        &__fig {
+            width: 50%;
+        }
+    }
+}

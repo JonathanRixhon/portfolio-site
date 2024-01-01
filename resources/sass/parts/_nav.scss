@@ -1,5 +1,6 @@
 @use "../config/colors" as colors;
 @use "../config/sizes" as sizes;
+@use 'sass:math';
 
 .nav {
     display: flex;
@@ -59,7 +60,7 @@
             padding: sizes.$spacer 0;
             &::after {
                 position: absolute;
-                bottom: sizes.$spacer / 2;
+                bottom: math.div(sizes.$spacer, 2);
             }
         }
 
