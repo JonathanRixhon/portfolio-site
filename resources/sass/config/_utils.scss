@@ -54,7 +54,7 @@ body {
         padding-left: sizes.$gap;
 
         li {
-            margin-bottom: sizes.$gap / 2;
+            margin-bottom: sizes.$spacer * 2;
         }
     }
 }

@@ -1,15 +1,15 @@
-<section class="skills wrapper">
+<section class="skills wrapper" id="skills">
     <div class="skills__container">
         <h2 class="skills__title">{{ $content['title'] }}</h2>
         <div class="skills__discipline-links">
             @foreach ($disciplines as $discipline)
-                <a href="{{ $discipline->slug }}" class="skills__discipline-link">{{ $discipline->name }}</a>
+                <a href="#{{ $discipline->slug }}" class="skills__discipline-link {{ $loop->first ? 'skills__discipline-link--active' : ''}}">{{ $discipline->name }}</a>
             @endforeach
         </div>
 
         <div class="skills__disciplines">
             @foreach ($disciplines as $discipline)
-                <article class="skills__discipline" id="{{ $discipline->slug }}">
+                <article class="skills__discipline {{ $loop->first ? 'skills__discipline--active' : ''}}" id="{{ $discipline->slug }}">
                     <h3 class="skills__discipline-title">{{ $discipline->name }}</h3>
                     <ul class="skills__technologies">
                         @foreach ($discipline->technologies as $technology)
