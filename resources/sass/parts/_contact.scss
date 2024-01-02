@@ -25,4 +25,18 @@
         font-size: sizes.$xl;
         margin-bottom: sizes.$gap * 2;
     }
+
+    @media (max-width: sizes.$bp-s) {
+        &__title {
+            font-size: sizes.$xxl;
+        }
+
+        &__body {
+            font-size: sizes.$l;
+        }
+
+        &__container {
+            width: 100%;
+        }
+    }
 }

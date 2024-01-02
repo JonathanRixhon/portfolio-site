@@ -136,4 +136,10 @@
         transition: all 200ms ease;
         transform: translateY(15px);
     }
+
+    @media (max-width: sizes.$bp-s) {
+        &__container {
+            width: 100%;
+        }
+    }
 }
