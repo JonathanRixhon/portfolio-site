@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->string('url')->nullable();
+            $table->string('url');
             $table->uuid('discipline_id');
             $table->timestamps();
 

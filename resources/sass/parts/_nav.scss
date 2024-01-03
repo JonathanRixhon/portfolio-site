@@ -45,6 +45,9 @@
 
         &--home {
             font-weight: 600;
+            &::after {
+                display: none;
+            }
         }
 
         &--current::after {

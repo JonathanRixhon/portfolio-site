@@ -45,8 +45,7 @@ class TechnologyForm extends Form
                     ]),
                     TextInput::make('url')
                         ->url()
-                        ->columnSpanFull()
-                        ->nullable(),
+                        ->columnSpanFull(),
                 ])
         ];
     }
