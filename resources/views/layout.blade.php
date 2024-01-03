@@ -22,6 +22,7 @@
     <!-- ASSETS -->
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @cookieconsentscripts
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -46,6 +47,7 @@
         </x-flash>
     @endsession
     {{-- <x-footer /> --}}
+    @cookieconsentview
 </body>
 
 </html>
