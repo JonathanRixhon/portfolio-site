@@ -31,6 +31,10 @@
         transform: scale(1.02);
     }
 
+    &__link:focus ~ &__fig &__img {
+        box-shadow: 0 0 40px 0px rgba($color: colors.$secondary, $alpha: 0.6);
+    }
+
     &__fig {
         padding: 8.0808080808%;
         width: 100%;
