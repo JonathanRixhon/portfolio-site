@@ -2,11 +2,12 @@ export default class Gradient {
     constructor() {
         this.el = document.querySelector('.gradient-effect');
         this.reactiveTagNames = ['A', 'BUTTON', 'INPUT', 'TEXTAREA', 'LABEL'];
-        this.mouseFollow = document.querySelector('.gradient-effect__mouse-follow');
         this.init();
     }
 
     init() {
+        this.buildElement();
+        this.mouseFollow = document.querySelector('.gradient-effect__mouse-follow');
         this.setEvents();
     }
 
@@ -16,6 +17,7 @@ export default class Gradient {
         document.addEventListener('mousemove', (e) => {
             clearTimeout(debounceTimeout);
             debounceTimeout = setTimeout(() => {
+                this.mouseFollow.style.opacity = 1;
                 this.updateMouseFollow(e);
             }, 0.1);
         });
@@ -46,5 +48,11 @@ export default class Gradient {
         this.mouseFollow.style.width = ``;
         this.mouseFollow.style.height = ``;
         this.mouseFollow.classList.remove('gradient-effect__mouse-follow--active');
+    }
+
+    buildElement() {
+        let gradient = document.createElement('div');
+        gradient.classList.add('gradient-effect__mouse-follow');
+        this.el.appendChild(gradient);
     }
 }

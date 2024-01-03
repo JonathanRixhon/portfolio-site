@@ -47,6 +47,7 @@
         filter: blur(70px);
         opacity: 0.4;
         backface-visibility: hidden;
+        opacity: 0;
 
         transition: background-color 400ms ease, width 400ms ease, height 400ms ease;
 
