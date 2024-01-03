@@ -10,12 +10,15 @@
 
             <div class="skills__disciplines">
                 @foreach ($disciplines as $discipline)
-                    <article class="skills__discipline {{ $loop->first ? 'skills__discipline--active' : ''}}" id="{{ $discipline->slug }}">
+                    @php
+                        $firstDiscipline = $loop->first;
+                    @endphp
+                    <article class="skills__discipline {{ $firstDiscipline ? 'skills__discipline--active' : ''}}" id="{{ $discipline->slug }}">
                         <h3 class="skills__discipline-title">{{ $discipline->name }}</h3>
                         <ul class="skills__technologies">
                             @foreach ($discipline->technologies as $technology)
                                 <li class="skills__technology">
-                                    <a href="{{ $technology->url }}" class="skills__technology-link" target="_blank" rel="noopener noreferrer">
+                                    <a href="{{ $technology->url }}" class="skills__technology-link" target="_blank" rel="noopener noreferrer" tabindex="{{ $firstDiscipline ? 0 : -1 }}">
                                         {{ $technology->name }}
                                     </a>
                                     <p aria-hidden="true" class="skills__technology-title">{{ $technology->name }}</p>

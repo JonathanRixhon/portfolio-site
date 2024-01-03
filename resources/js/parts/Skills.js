@@ -26,8 +26,14 @@ export default class Skills {
         this.disciplines.forEach((discipline) => {
             if (link.getAttribute("href").substring(1) === discipline.id) {
                 discipline.classList.add('skills__discipline--active');
+                discipline.querySelectorAll('.skills__technology-link').forEach((technologyLink) => {
+                    technologyLink.setAttribute('tabindex', '0');
+                });
                 return;
             }
+            discipline.querySelectorAll('.skills__technology-link').forEach((technologyLink) => {
+                technologyLink.setAttribute('tabindex', '-1');
+            });
             discipline.classList.remove('skills__discipline--active');
         });
     }

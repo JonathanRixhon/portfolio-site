@@ -29,7 +29,12 @@ export default class Modals {
     }
 
     openModal(toggle) {
-        let modal = document.querySelector('#' + toggle.dataset.modal);
-        modal.classList.add('modal--active');
+        //let modal = document.querySelector('#' + );
+        this.modals.forEach((modal) => {
+            if (modal.modal.getAttribute('id') === toggle.getAttribute('data-modal')) {
+                modal.openModal();
+                return;
+            }
+        });
     }
 }
