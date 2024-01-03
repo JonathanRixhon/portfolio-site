@@ -1,6 +1,6 @@
 @use "../config/colors" as colors;
 @use "../config/sizes" as sizes;
-@use 'sass:math';
+@use "sass:math";
 
 .nav {
     display: flex;
@@ -23,7 +23,8 @@
         display: block;
         position: relative;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             &::after {
                 width: 80%;
             }
@@ -44,6 +45,10 @@
 
         &--home {
             font-weight: 600;
+        }
+
+        &--current::after {
+            width: 60%;
         }
 
         &--icon {

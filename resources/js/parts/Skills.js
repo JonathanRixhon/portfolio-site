@@ -1,6 +1,8 @@
 export default class Skills {
     constructor() {
-        this.element = document.querySelector('#skills');
+        if (!(this.element = document.querySelector('#skills'))) {
+            return;
+        }
         this.disciplineLinks = Array.from(this.element.querySelectorAll('.skills__discipline-link'));
         this.disciplines = Array.from(this.element.querySelectorAll('.skills__discipline'));
         this.init();

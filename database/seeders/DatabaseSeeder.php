@@ -7,6 +7,7 @@ use App\Models\Work;
 use App\Models\Technology;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Database\Seeders\PageTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,6 +28,10 @@ class DatabaseSeeder extends Seeder
             //     )->create();
         }
 
+        $this->call([
+            PageTableSeeder::class,
+        ]);
+
         \App\Models\User::factory()->create([
             'name' => 'Jonathan Rixhon',
             'email' => env('ADMIN_EMAIL'),
@@ -34,13 +39,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Discipline::create([
-            'name' => 'Backend development',
-            'slug' => Str::slug('Backend development'),
+            'name' => 'Backend',
+            'slug' => Str::slug('Backend'),
         ]);
 
         \App\Models\Discipline::create([
-            'name' => 'Frontend development',
-            'slug' => Str::slug('Frontend development'),
+            'name' => 'Frontend',
+            'slug' => Str::slug('Frontend'),
         ]);
 
         \App\Models\Discipline::create([

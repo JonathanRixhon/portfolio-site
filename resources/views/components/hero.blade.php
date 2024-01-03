@@ -9,7 +9,9 @@
             <a href="{{ route('contact') }}" class="button" data-modal="contact-form">{{ $content['cta'] }}</a>
         </div>
         <figure class="hero__fig">
-            <img class="hero__img" src="{{ asset(Storage::url($content['image'])) }}" alt="Image of Jonathan">
+            @if (isset($content['image']))
+                <img class="hero__img" src="{{ asset(Storage::url($content['image'])) }}" alt="Image of Jonathan">
+            @endif
         </figure>
     </div>
 </section>
