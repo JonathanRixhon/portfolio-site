@@ -41,7 +41,7 @@ export default class Contact {
         Object.keys(errors).forEach((key) => {
             let input = this.form.querySelector(`[for="${key}"]`);
             let error = errors[key][0];
-            input.classList.add('input--error');
+            input.parentElement.classList.add('input--error');
             input.insertAdjacentHTML('afterend', `<p class="input__hint">${error}</p>`);
         });
     }
