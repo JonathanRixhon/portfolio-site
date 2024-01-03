@@ -4,11 +4,12 @@ namespace App\Filament\Resources\Concerns;
 
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 
 abstract class Form
 {
-    abstract public static function fields(): array;
+    abstract public static function fields(Model $record): array;
 
     protected static function titleField(TextInput $titleField): TextInput
     {

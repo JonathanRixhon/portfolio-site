@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="wrapper">
-        <x-contact-form />
+        <x-contact-form :contact="$page->content['form']" />
     </div>
 @endsection

@@ -20,7 +20,7 @@ class CompanyResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema(CompanyForm::fields());
+            ->schema(CompanyForm::fields($form->getRecord()));
     }
 
     public static function table(Table $table): Table

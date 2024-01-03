@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Http\PageTemplate;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,7 @@ class WorksController extends Controller
 
         return view('pages.home', [
             'page' => $template,
+            'contact' => Page::where('route', 'contact')->firstOrFail(),
         ]);
     }
 }

@@ -34,9 +34,14 @@
 
     <main class="main">
         @yield('content')
+
+        <x-modal toggle="contact-form">
+            <x-contact-form :contact="$contact->content['form']" modifier="contact-form--modal" />
+        </x-modal>
     </main>
 
     {{-- <x-footer /> --}}
     <x-gradient-effect />
 </body>
+
 </html>

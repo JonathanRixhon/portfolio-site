@@ -6,18 +6,19 @@ use Closure;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
+use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
+use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use App\Filament\Resources\DisciplineRescource\Forms\DisciplineForm;
-use Filament\Forms\Components\Group;
 
 class TechnologyForm extends Form
 {
-    public static function fields(): array
+    public static function fields(Model $record): array
     {
         return [
             Section::make('General informations')

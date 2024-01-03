@@ -29,7 +29,7 @@ class WorkResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form->schema(WorkForm::fields());
+        return $form->schema(WorkForm::fields($form->getRecord()));
     }
 
     public static function table(Table $table): Table

@@ -7,6 +7,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
+use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
 use Filament\Forms\Components\RichEditor;
@@ -15,7 +16,7 @@ use App\Filament\Resources\DisciplineRescource\Forms\CompanyForm;
 
 class WorkForm extends Form
 {
-    public static function fields(): array
+    public static function fields(Model $record): array
     {
         return [
             Section::make('General informations')

@@ -60,7 +60,7 @@ class PageTableSeeder extends Seeder
             'meta_og' => 'Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nullam euismod, nisl eget ultricies aliquam, nunc sapien aliquet urna, vitae aliquam nisi nisl vitae nunce.',
             'meta_twitter' => 'Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nullam euismod, nisl eget ultricies aliquam, nunc sapien aliquet urna, vitae aliquam nisi nisl vitae nunce.',
             'content' => [
-                'form' => [
+                'works' => [
                     'title' => 'My works',
                 ],
             ]

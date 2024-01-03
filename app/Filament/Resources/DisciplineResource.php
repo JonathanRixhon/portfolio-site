@@ -23,7 +23,7 @@ class DisciplineResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form->schema(DisciplineForm::fields());
+        return $form->schema(DisciplineForm::fields($form->getRecord()));
     }
 
     public static function table(Table $table): Table

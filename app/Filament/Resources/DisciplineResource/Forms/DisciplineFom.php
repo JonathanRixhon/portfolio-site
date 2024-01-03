@@ -6,12 +6,13 @@ use Closure;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
 
 class DisciplineForm extends Form
 {
-    public static function fields(): array
+    public static function fields(Model $record): array
     {
         return [
             self::titleField(TextInput::make('name'))

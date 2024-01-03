@@ -20,7 +20,7 @@ class TechnologyResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema(TechnologyForm::fields());
+            ->schema(TechnologyForm::fields($form->getRecord()));
     }
 
     public static function table(Table $table): Table
