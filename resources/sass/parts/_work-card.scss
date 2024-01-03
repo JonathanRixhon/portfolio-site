@@ -26,8 +26,9 @@
         font-size: 0;
     }
 
-    &__link:hover ~ &__fig &__img {
-        transform: scale(1.01);
+    &__link:hover ~ &__fig &__img,
+    &__link:focus ~ &__fig &__img {
+        transform: scale(1.02);
     }
 
     &__fig {

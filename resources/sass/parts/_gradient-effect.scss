@@ -25,12 +25,34 @@
         mix-blend-mode: overlay;
     }
 
+
     &__gradient {
         position: absolute;
         opacity: 0.4;
         display: block;
         filter: blur(150px);
         z-index: -1;
+        backface-visibility: hidden;
+    }
+    &__mouse-follow {
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 100vw;
+        z-index: -1;
+        pointer-events: none;
+        background-color: colors.$primary;
+        filter: blur(70px);
+        opacity: 0.4;
+        backface-visibility: hidden;
+
+        transition: background-color 400ms ease, width 400ms ease, height 400ms ease;
+
+        &--active {
+            background-color: colors.$secondary;
+        }
     }
 
     &__gradient-1 {

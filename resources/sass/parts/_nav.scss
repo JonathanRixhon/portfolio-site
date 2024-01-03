@@ -23,7 +23,7 @@
         display: block;
         position: relative;
 
-        &:hover {
+        &:hover, &:focus {
             &::after {
                 width: 80%;
             }
