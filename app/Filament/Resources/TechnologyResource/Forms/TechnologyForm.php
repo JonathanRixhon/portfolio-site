@@ -18,7 +18,7 @@ use App\Filament\Resources\DisciplineRescource\Forms\DisciplineForm;
 
 class TechnologyForm extends Form
 {
-    public static function fields(Model $record): array
+    public static function fields(null|Model $record=null): array
     {
         return [
             Section::make('General informations')

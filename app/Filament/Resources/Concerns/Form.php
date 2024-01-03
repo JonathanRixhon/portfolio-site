@@ -9,7 +9,7 @@ use Filament\Forms\Components\TextInput;
 
 abstract class Form
 {
-    abstract public static function fields(Model $record): array;
+    abstract public static function fields(null|Model $record=null): array;
 
     protected static function titleField(TextInput $titleField): TextInput
     {

@@ -8,7 +8,7 @@ use App\Filament\Resources\Concerns\Form;
 
 class CompanyForm extends Form
 {
-    public static function fields(Model $record): array
+    public static function fields(null|Model $record=null): array
     {
         return [
             TextInput::make('name')

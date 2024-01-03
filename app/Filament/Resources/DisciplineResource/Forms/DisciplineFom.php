@@ -12,7 +12,7 @@ use App\Filament\Resources\Concerns\Form;
 
 class DisciplineForm extends Form
 {
-    public static function fields(Model $record): array
+    public static function fields(null|Model $record=null): array
     {
         return [
             self::titleField(TextInput::make('name'))
