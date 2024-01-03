@@ -16,7 +16,7 @@ use App\Filament\Resources\DisciplineRescource\Forms\CompanyForm;
 
 class WorkForm extends Form
 {
-    public static function fields(Model $record): array
+    public static function fields(null|Model $record = null): array
     {
         return [
             Section::make('General informations')
@@ -28,7 +28,7 @@ class WorkForm extends Form
                         ->directory('works')
                         ->collection('thumbnails')
                         ->required()
-                        ->imageEditorAspectRatios(['9:16', '16:9', '1:1']),
+                        ->imageCropAspectRatio('16:9'),
                     Group::make([
                         self::titleField(TextInput::make('name'))
                             ->required(),

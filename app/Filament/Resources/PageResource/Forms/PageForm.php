@@ -15,7 +15,7 @@ class PageForm extends Form
 {
     protected static Model $record;
 
-    public static function fields(Model $record): array
+    public static function fields(null|Model $record=null): array
     {
         self::$record = $record;
         $pageFields = [];
@@ -53,7 +53,7 @@ class PageForm extends Form
                     FileUpload::make('content.hero.image')
                         ->avatar()
                         ->imageEditor()
-                        ->imageEditorAspectRatios(['1:1'])
+                        ->imageCropAspectRatio('1:1')
                         ->required()
                         ->columnSpan(1),
                     Group::make()
