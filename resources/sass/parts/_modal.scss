@@ -1,0 +1,85 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+@use "sass:math" as math;
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: sizes.$spacer * 8;
+    display: grid;
+    place-items: center;
+    background-color: black;
+
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    transition: opacity 150ms ease, z-index 150ms ease;
+    z-index: -1;
+    opacity: 0;
+
+    &--active {
+        z-index: 10;
+        opacity: 1;
+    }
+
+    &__container {
+        position: relative;
+        max-width: 866px;
+        width: 100%;
+        border-radius: sizes.$spacer;
+        background-color: colors.$dark-50;
+        padding: sizes.$gap * 3 sizes.$gap * 4;
+    }
+
+    &__close {
+        position: absolute;
+        top: sizes.$gap;
+        right: sizes.$gap;
+        color: colors.$dark-700;
+        cursor: pointer;
+        font-size: 0;
+        text-indent: -9999px;
+        width: sizes.$gap;
+        height: sizes.$gap;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: math.div(sizes.$gap, 2);
+            right: 0;
+            width: sizes.$gap;
+            height: 2px;
+            background-color: colors.$dark-700;
+            transform: rotate(45deg);
+            border-radius: 100vh;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @media (max-width: sizes.$bp-xxl) {
+        padding: 4.4444444444%;
+    }
+
+    @media (max-width: sizes.$bp-xxl) {
+        &__container {
+            padding: sizes.$gap * 2;
+        }
+    }
+
+    @media (max-width: sizes.$bp-m) {
+        &__container {
+            padding: sizes.$gap * 1;
+        }
+        & > * {
+            width: 100%;
+        }
+    }
+}

@@ -4,6 +4,6 @@
         <div class="contact__body wysiwyg">
             {{ $content['body'] }}
         </div>
-        <a href="{{ route('contact') }}" class="button button--big">{{ $content['cta'] }}</a>
+        <a href="{{ route('contact') }}" class="button button--big" data-modal="contact-form">{{ $content['cta'] }}</a>
     </div>
 </section>

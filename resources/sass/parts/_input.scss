@@ -1,0 +1,57 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.input {
+    padding: sizes.$spacer;
+    border: 1px solid colors.$secondary;
+    border-radius: 4px;
+    display: flex;
+    gap: sizes.$spacer;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & + & {
+        margin-top: sizes.$gap;
+    }
+
+    &--error {
+        border-color: colors.$danger;
+    }
+
+    &__label {
+        display: block;
+        font-size: sizes.$xs;
+        text-transform: uppercase;
+        font-weight: 700;
+        flex: 1;
+        cursor: pointer;
+    }
+
+    &__hint {
+        font-size: sizes.$xs;
+        font-weight: 700;
+        color: colors.$danger;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        resize: none;
+        width: 100%;
+        font-size: sizes.$m;
+        background-color: transparent;
+        border: none;
+        -webkit-appearance: none;
+        font-family: "inter", sans-serif;
+
+        &::placeholder {
+            font-size: sizes.$m;
+            color: colors.$dark-500;
+            font-family: "inter", sans-serif;
+        }
+
+        &--textarea {
+            min-height: 10rem;
+        }
+    }
+}

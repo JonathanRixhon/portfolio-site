@@ -11,13 +11,13 @@
                 <a href="{{ route('works') }}" class="nav__link">Works</a>
             </li>
             <li class="nav__item">
-                <a href="{{ route('contact') }}" class="nav__link">Contact</a>
+                <a href="{{ route('contact') }}" class="nav__link" data-modal="contact-form">Contact</a>
             </li>
             <li class="nav__item nav__item--icon">
                 <a href="#" class="nav__link nav__link--icon">Linkedin</a>
             </li>
             <li class="nav__item nav__item--icon">
-                <a href="#" class="nav__link nav__link--icon">Github</a>
+                <a href="#" class="nav__link nav__link--icon" data-modal="contact-form">Github</a>
             </li>
         </ul>
     </nav>

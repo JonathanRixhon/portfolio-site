@@ -18,7 +18,5 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/works', WorksController::class)->name('works');
-Route::get('/works/{work}', function () {
-        return 'hi';
-})->name('works.show');
+Route::get('/works/{work}', function () {return 'hi';})->name('works.show');
 Route::get('/contact', ContactController::class)->name('contact');

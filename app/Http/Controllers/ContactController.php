@@ -12,9 +12,9 @@ class ContactController extends Controller
      */
     public function __invoke(Request $request, PageTemplate $template,)
     {
-        $template->load('home');
+        $template->load('contact');
 
-        return view('pages.home', [
+        return view('pages.contact', [
             'page' => $template,
         ]);
     }

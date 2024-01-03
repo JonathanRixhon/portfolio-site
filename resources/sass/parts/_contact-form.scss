@@ -1,0 +1,32 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.contact-form {
+    width: 53.66666667%;
+    min-height: 80vh;
+    padding: sizes.$gap * 3 0;
+    margin: 0 auto;
+
+
+    &--modal {
+        min-height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .button {
+        margin: sizes.$gap 0 0 auto;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: sizes.$xl;
+        font-weight: 700;
+        margin: 0 0 sizes.$spacer;
+    }
+
+    &__subtitle {
+        margin: 0 0 sizes.$spacer * 3;
+    }
+}
