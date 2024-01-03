@@ -32,16 +32,20 @@
 <body class="layout">
     <x-header :$page />
 
-    <main class="main">
+    <main class="{{ $page->route }}">
         @yield('content')
-
         <x-modal toggle="contact-form">
             <x-contact-form :contact="$contact->content['form']" modifier="contact-form--modal" />
         </x-modal>
     </main>
 
-    {{-- <x-footer /> --}}
     <x-gradient-effect />
+    @session('flash')
+        <x-flash title="{{ session('flash')['title'] }}">
+            {{ session('flash')['message'] }}
+        </x-flash>
+    @endsession
+    {{-- <x-footer /> --}}
 </body>
 
 </html>

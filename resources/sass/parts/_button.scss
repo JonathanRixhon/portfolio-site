@@ -30,6 +30,29 @@
         font-size: sizes.$l;
     }
 
+    &[disabled] {
+        background-color: colors.$dark-400;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    &--loading {
+        text-indent: -99999px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            border: 3px solid colors.$dark-700;
+            border-color: colors.$dark-700 colors.$dark-700 colors.$dark-700 transparent;
+            animation: spin 1s linear infinite;
+        }
+    }
+
     &--secondary {
         background-color: colors.$secondary;
     }
@@ -38,5 +61,15 @@
         &--big {
             font-size: sizes.$m;
         }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 @use "../config/colors" as colors;
 @use "../config/sizes" as sizes;
+@use "../config/typography" as typography;
 @use "sass:math";
 
 .nav {
@@ -12,7 +13,11 @@
 
     &__item {
         &--icon {
-            display: none;
+            font-family: interbold;
+            &::before {
+                font-family: 'icons';
+                content: typography.$github;
+            }
         }
     }
 

@@ -1,0 +1,52 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.flash {
+    padding: sizes.$gap;
+    position: fixed;
+    z-index: 20;
+    bottom: sizes.$spacer * 2;
+    right: sizes.$spacer * 2;
+    background-color: colors.$dark-50;
+    width: 90%;
+    max-width: 400px;
+    border-radius: sizes.$spacer;
+
+    transition: all 0.3s ease;
+    transform: translateY(1rem);
+    opacity: 0;
+
+    &__title {
+        font-size: sizes.$xs;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: sizes.$spacer;
+    }
+
+    &__content {
+        font-size: sizes.$m;
+        margin-bottom: sizes.$spacer;
+    }
+
+    &__container {
+        padding-left: sizes.$gap;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            left: 0;
+            top:0;
+            background-color: colors.$success;
+            background-color: colors.$primary;
+            border-radius: 100vw;
+            margin-right: sizes.$gap;
+        }
+    }
+
+    &--active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

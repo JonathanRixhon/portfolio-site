@@ -4,15 +4,23 @@ export default class Modal {
         this.close = el.querySelector('.modal__close');
         this.container = el.querySelector('.modal__container');
         this.interactible = el.querySelectorAll('input, textarea, button, a');
-        this.init();
+        this.togglers = document.querySelectorAll(`[data-modal="${this.modal.getAttribute('id')}"]`);
     }
 
     init() {
+        if (!this.modal) return null;
         this.closeModal();
         this.setEvents();
     }
 
     setEvents() {
+        this.togglers.forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.openModal();
+            });
+        });
+
         this.modal.addEventListener('click', (e) => {
             if (!(this.container.contains(e.target) || this.container === e.target)) {
                 this.closeModal();
@@ -24,9 +32,8 @@ export default class Modal {
             this.closeModal();
         });
 
-        this.close.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.closeModal();
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') this.closeModal();
         });
     }
 

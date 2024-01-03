@@ -1,8 +1,7 @@
-// @font-face {
-//     font-family: inter;
-//     src: url(../../fonts/Inter-Bold.ttf);
-//     font-weight: bolder;
-// }
+@font-face {
+    font-family: interbold;
+    src: url(../../fonts/Inter-Bold.ttf);
+}
 
 // @font-face {
 //     font-family: inter-bold;
@@ -10,8 +9,15 @@
 //     font-weight: bold;
 // }
 
-
 @font-face {
-    font-family: inter;
-    src:url('@assets/fonts/graphik/Graphik-Medium-Web.woff2');
+    font-family: 'icons';
+    src: url(../../fonts/fontello.woff) format('woff'),
+    url(../../fonts/fontello.eot) format('eot'),
+    url(../../fonts/fontello.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+$github: '\e800';
+$linkedin: '\e801';
+

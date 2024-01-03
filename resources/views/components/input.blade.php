@@ -1,12 +1,12 @@
 <div class="input {{ $errors->has($name) ? 'input--error' : ''}}">
-    <label class="input__label" for="name">{{ $slot }}</label>
+    <label class="input__label" for="{{ $name }}">{{ $slot }}</label>
     @error($name)
-        <p class="input__hint">This field is required</p>
+        <p class="input__hint">{{ $message }}</p>
     @enderror
     @if ($type === 'textarea')
-        <textarea class="input__input {{ 'input__input--' . $type }}" placeholder="{{ $placeholder }}" name="{{ $name }}" id="{{ $name }}"></textarea>
+        <textarea class="input__input {{ 'input__input--' . $type }}" placeholder="{{ $placeholder }}" name="{{ $name }}" id="{{ $name }}">{{ old($name) }}</textarea>
     @else
-        <input class="input__input" placeholder="{{ $placeholder }}" type="{{ $type }}" name="{{ $name }}" id="{{ $name }}">
+        <input class="input__input" placeholder="{{ $placeholder }}" type="{{ $type }}" name="{{ $name }}" id="{{ $name }}" value="{{ @old($name) }}">
     @endif
 </div>
 

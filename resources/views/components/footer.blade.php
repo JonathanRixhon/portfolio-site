@@ -3,7 +3,7 @@
         <div class="footer__header">
             <h2 class="sro">Footer</h2>
             <a href="{{ route('home') }}" class="footer__home-link">Jonathan Rixhon</a>
-            <a href="mailto:{{ env('CONTACT_EMAIL') }}" class="footer__mailto">{{ env('CONTACT_EMAIL') }}</a>
+            <a href="mailto:{{ env('MAIL_FROM_ADDRESS') }}" class="footer__mailto">{{ env('MAIL_FROM_ADDRESS') }}</a>
         </div>
         <div class="footer__links">
             <a href="{{ route('home') }}" class="footer__link">Home</a>
