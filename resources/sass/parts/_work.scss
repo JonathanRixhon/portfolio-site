@@ -5,9 +5,6 @@
 .work {
     min-height: 100vh;
     margin-top: sizes.$gap * 2;
-    background-color: colors.$dark-50;
-    padding: sizes.$gap * 2;
-    border-radius: sizes.$spacer * 2;
 
     ol,
     ul {
@@ -37,6 +34,10 @@
         display: flex;
         align-items: flex-start;
         gap: 6.4257028112%;
+        width: 83%;
+        background-color: colors.$dark-50;
+        padding: sizes.$gap * 2;
+        border-radius: sizes.$spacer * 2;
     }
 
     &__title {
@@ -76,7 +77,7 @@
         }
     }
 
-    @media (max-width: sizes.$bp-l) {
+    @media (max-width: sizes.$bp-xl) {
         &__container {
             display: block;
         }

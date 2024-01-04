@@ -2,7 +2,7 @@
 @use "../config/sizes" as sizes;
 
 .about {
-    margin: 0 auto sizes.$gap * 15;
+    margin: 0 auto sizes.$gap * 10;
 
     &__container {
         width: 64.8333333333%;
@@ -33,9 +33,16 @@
     }
 
     @media (max-width: sizes.$bp-s) {
+        margin: 0 auto sizes.$gap * 5;
+
         &__container {
             width: 100%;
+
+            .wysiwyg {
+                font-size: sizes.$l;
+            }
         }
+
         &__title {
             font-size: sizes.$xl;
         }

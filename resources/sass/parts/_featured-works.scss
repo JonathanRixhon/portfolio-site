@@ -2,7 +2,7 @@
 @use "../config/sizes" as sizes;
 
 .featured-works {
-    margin: sizes.$spacer * 10 auto sizes.$gap * 15;
+    margin: sizes.$spacer * 10 auto sizes.$gap * 10;
 
     &__header {
         display: flex;
@@ -18,6 +18,8 @@
     }
 
     @media (max-width: sizes.$bp-s) {
+        margin: sizes.$spacer * 10 auto sizes.$gap * 5;
+
         &__header {
             width: 100%;
         }

@@ -79,6 +79,14 @@ body {
         }
     }
 
+    u {
+        box-shadow: 0 1px 0 0 transparent;
+        text-decoration: none;
+    }
+    span {
+        text-decoration: none !important;
+    }
+
     em {
         font-style: italic;
     }

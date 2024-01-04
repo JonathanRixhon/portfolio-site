@@ -54,10 +54,12 @@
     }
 
     &--secondary {
-        background-color: colors.$secondary;
+        background-color: colors.$light-secondary;
     }
 
     @media (max-width: sizes.$bp-s) {
+        min-width: 150px;
+        padding: 1em 0.75em;
         &--big {
             font-size: sizes.$m;
         }
