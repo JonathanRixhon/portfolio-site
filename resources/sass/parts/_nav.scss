@@ -21,7 +21,7 @@
             font-size: 0;
             &::before {
                 font-size: sizes.$l;
-                color: colors.$dark-700;
+                color: colors.$dark-950;
                 font-family: 'icons';
             }
         }
@@ -41,7 +41,7 @@
 
     &__link {
         text-decoration: none;
-        color: colors.$dark-700;
+        color: colors.$dark-950;
         padding: sizes.$gap 0;
         display: block;
         position: relative;

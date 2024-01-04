@@ -6,7 +6,7 @@
     padding: 1em;
     font-size: sizes.$s;
     font-weight: 700;
-    color: colors.$dark-700;
+    color: colors.$dark-950;
     text-decoration: none;
     border-radius: 4px;
     text-transform: uppercase;
@@ -47,8 +47,8 @@
             width: 1.5em;
             height: 1.5em;
             border-radius: 50%;
-            border: 3px solid colors.$dark-700;
-            border-color: colors.$dark-700 colors.$dark-700 colors.$dark-700 transparent;
+            border: 3px solid colors.$dark-950;
+            border-color: colors.$dark-950 colors.$dark-950 colors.$dark-950 transparent;
             animation: spin 1s linear infinite;
         }
     }

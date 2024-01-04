@@ -14,6 +14,12 @@ export default class Modal {
     }
 
     setEvents() {
+        document.addEventListener('wheel', (e) =>{
+            if (! this.modal.classList.contains('modal--active')) return
+            e.preventDefault();
+            e.stopPropagation();
+        }, {passive: false});
+
         this.togglers.forEach((el) => {
             el.addEventListener('click', (e) => {
                 e.preventDefault();

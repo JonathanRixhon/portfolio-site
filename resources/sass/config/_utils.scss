@@ -16,7 +16,7 @@ body {
     font-size: sizes.$l;
     overflow-x: auto;
     overflow-y: auto;
-    color: colors.$dark-700;
+    color: colors.$dark-950;
     position: relative;
     //min-height: 100%;
 
@@ -66,19 +66,32 @@ body {
     p {
         font-size: sizes.$l;
         line-height: 150%;
-        color: colors.$dark-700;
+        color: colors.$dark-950;
     }
 
     a {
-        color: colors.$dark-700;
+        color: colors.$dark-950;
         position: relative;
-        box-shadow: 0 1px 0 0 colors.$dark-700;
+        //box-shadow: 0 2px 0 0 colors.$secondary;
         text-decoration: none;
-        transition: box-shadow 200ms ease-in-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            border-radius: 100vw;
+            background-color: colors.$secondary;
+            transition: width 200ms ease;
+        }
 
         &:hover,
         &:focus {
-            box-shadow: 0 1px 0 0 transparent;
+            &::after {
+                width: 100%;
+            }
         }
     }
 

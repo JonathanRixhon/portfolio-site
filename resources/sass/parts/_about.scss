@@ -11,7 +11,9 @@
         position: relative;
 
         .wysiwyg {
-            font-size: sizes.$xl;
+            p{
+                font-size: sizes.$xl;
+            }
         }
 
         &::before {

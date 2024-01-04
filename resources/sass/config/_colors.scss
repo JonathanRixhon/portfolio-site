@@ -1,20 +1,19 @@
 $primary: #edb01f;
 $secondary: #6298d4;
 $light-secondary: #8bb3df;
-$success: #3EED21;
-$danger: #ED2121;
-$dark-50: #fafaf9;
-$dark-200: #f5f5f4;
-$dark-100: #e7e5e4;
-$dark-400: #d6d3d1;
-$dark-300: #a8a29e;
-$dark-600: #78716c;
-$dark-500: #57534e;
-$dark-800: #44403c;
-$dark-700: #292524;
-$dark-950: #1c1917;
-$dark-900: #0c0a09;
-
+$success: #3eed21;
+$danger: #ed2121;
+$dark-50: #F2F1ED;
+$dark-100: #E9E8E2;
+$dark-200: #CFCCBF;
+$dark-300: #B4B09C;
+$dark-400: #A19982;
+$dark-500: #928772;
+$dark-600: #827564;
+$dark-950: #6D6055;
+$dark-800: #59504A;
+$dark-900: #4A4440;
+$dark-950: #2A2522;
 
 :root {
     --primary: #{$primary};
@@ -27,7 +26,7 @@ $dark-900: #0c0a09;
     --dark-600: #{$dark-600};
     --dark-500: #{$dark-500};
     --dark-800: #{$dark-800};
-    --dark-700: #{$dark-700};
+    --dark-700: #{$dark-950};
     --dark-950: #{$dark-950};
     --dark-900: #{$dark-900};
 }

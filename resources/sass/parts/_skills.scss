@@ -23,7 +23,7 @@
 
     &__discipline-link {
         text-decoration: none;
-        color: colors.$dark-700;
+        color: colors.$dark-950;
 
         & + & {
             margin-left: sizes.$spacer;
@@ -132,7 +132,7 @@
     &__technology-title {
         text-decoration: none;
         font-size: sizes.$s;
-        color: colors.$dark-700;
+        color: colors.$dark-950;
         text-transform: uppercase;
         font-weight: 700;
         opacity: 0;

@@ -8,7 +8,7 @@
         padding: sizes.$gap;
         width: 66%;
         margin: 0 auto;
-        border-top: 1px solid colors.$dark-700;
+        border-top: 1px solid colors.$dark-950;
         display: flex;
         justify-content: space-between;
     }
@@ -16,7 +16,7 @@
     &__home-link, &__mailto, &__link {
         display: block;
         text-decoration: none;
-        color: colors.$dark-700;
+        color: colors.$dark-950;
     }
 
     &__home-link {
@@ -40,7 +40,7 @@
             font-size: 0;
             &::before {
                 font-size: sizes.$s;
-                color: colors.$dark-700;
+                color: colors.$dark-950;
                 font-family: 'icons';
             }
         }
