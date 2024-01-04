@@ -3,6 +3,7 @@
 
 .works {
     margin-top: sizes.$gap * 2;
+    min-height: 80vh;
     &__title {
         font-size: sizes.$xxl;
         font-weight: 700;

@@ -25,8 +25,8 @@ export default class Gradient {
 
     updateMouseFollow(e) {
         let mouse = this.mouseFollow.getBoundingClientRect()
-        this.reactiveElement(e, mouse)
         this.mouseFollow.style.transform = `translate(${e.clientX - (mouse.width / 2)}px, ${e.clientY - (mouse.height / 2)}px)`;
+        this.reactiveElement(e, mouse)
     }
 
     reactiveElement(e, mouse) {

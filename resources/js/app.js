@@ -4,6 +4,10 @@ import Gradient from './parts/Gradient';
 import Modals from './parts/Modals';
 import Flash from './parts/Flash';
 import Contact from './parts/Contact';
+const modules = import.meta.glob([
+    '../favicon/**',
+    '../img/**'
+])
 class App {
     constructor() {
         let skills = new Skills();
