@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::create([
             'name' => 'Jonathan Rixhon',
             'email' => env('ADMIN_EMAIL'),
+            'email_verified_at' => now()->subYear(),
             'password' => bcrypt(env('ADMIN_PASSWORD')),
         ]);
 
