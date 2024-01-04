@@ -9,8 +9,8 @@
             <a href="{{ route('home') }}" class="footer__link">Home</a>
             <a href="{{ route('works') }}" class="footer__link">Works</a>
             <a href="{{ route('contact') }}"  data-modal="contact-form" class="footer__link">Contact</a>
-            <a href="#" class="footer__link footer__link--icon footer__link--github">Github</a>
-            <a href="#" class="footer__link footer__link--icon footer__link--linkedin">Linkedin</a>
+            <a href="{{ env('GITHUB_ACCOUNT') }}" target="_blank" class="footer__link footer__link--icon footer__link--github">Github</a>
+            <a href="{{ env('LINKEDIN_ACCOUNT') }}" target="_blank" class="footer__link footer__link--icon footer__link--linkedin">Linkedin</a>
         </div>
     </div>
 </footer>

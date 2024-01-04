@@ -24,6 +24,11 @@ class Work extends Model implements HasMedia
         'featured' => 'boolean',
     ];
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
     public function technologies(): BelongsToMany
     {
         return $this->belongsToMany(Technology::class, 'technology_work');

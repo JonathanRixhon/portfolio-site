@@ -3,6 +3,7 @@
 @use "../config/typography" as typography;
 
 .footer {
+    margin-top: sizes.$gap * 5;
     &__container {
         padding: sizes.$gap;
         width: 66%;

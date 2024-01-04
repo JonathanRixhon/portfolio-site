@@ -4,7 +4,6 @@ import Gradient from './parts/Gradient';
 import Modals from './parts/Modals';
 import Flash from './parts/Flash';
 import Contact from './parts/Contact';
-
 class App {
     constructor() {
         let skills = new Skills();
