@@ -28,7 +28,10 @@ class WorkForm extends Form
                         ->directory('works')
                         ->collection('thumbnails')
                         ->required()
-                        ->imageCropAspectRatio('16:9'),
+                        ->imageResizeTargetWidth('854')
+                        ->imageResizeTargetHeight('480')
+                        ->imageCropAspectRatio('16:9')
+                        ->imageResizeMode('cover'),
                     Group::make([
                         self::titleField(TextInput::make('name'))
                             ->required(),

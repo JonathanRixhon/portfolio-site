@@ -54,6 +54,9 @@ class PageForm extends Form
                         ->avatar()
                         ->imageEditor()
                         ->imageCropAspectRatio('1:1')
+                        ->imageResizeTargetWidth('400')
+                        ->imageResizeTargetHeight('400')
+                        ->imageResizeMode('cover')
                         ->required()
                         ->columnSpan(1),
                     Group::make()

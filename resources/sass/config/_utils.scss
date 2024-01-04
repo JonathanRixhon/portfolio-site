@@ -72,26 +72,13 @@ body {
     a {
         color: colors.$dark-950;
         position: relative;
-        //box-shadow: 0 2px 0 0 colors.$secondary;
+        box-shadow: 0 2px 0 0 colors.$secondary;
         text-decoration: none;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 60%;
-            height: 4px;
-            border-radius: 100vw;
-            background-color: colors.$secondary;
-            transition: width 200ms ease;
-        }
+        transition: box-shadow 200ms ease-in-out;
 
         &:hover,
         &:focus {
-            &::after {
-                width: 100%;
-            }
+            box-shadow: 0 1px 0 0 transparent;
         }
     }
 

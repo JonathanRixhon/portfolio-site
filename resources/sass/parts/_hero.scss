@@ -51,6 +51,7 @@
         border-radius: 100%;
         width: 100%;
         height: auto;
+        background-color: colors.$secondary;
     }
 
     @media (max-width: sizes.$bp-s) {
