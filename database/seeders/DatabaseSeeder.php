@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             PageTableSeeder::class,
         ]);
 
-        \App\Models\User::factory()->create([
+        \App\Models\User::create([
             'name' => 'Jonathan Rixhon',
             'email' => env('ADMIN_EMAIL'),
             'password' => bcrypt(env('ADMIN_PASSWORD')),
@@ -52,7 +52,5 @@ class DatabaseSeeder extends Seeder
             'name' => 'Web design',
             'slug' => Str::slug('Web design'),
         ]);
-
-
     }
 }
