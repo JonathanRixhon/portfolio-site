@@ -22,6 +22,10 @@
     &__small {
         display: block;
         margin-bottom: sizes.$spacer;
+
+        strong {
+            font-weight: 700;
+        }
     }
 
     &__big {
