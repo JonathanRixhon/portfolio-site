@@ -35,13 +35,17 @@ class WorkForm extends Form
                         self::slugField('name'),
                         Toggle::make('featured')
                             ->required(),
-                        Select::make('company_id')
-                            ->relationship('company', 'name')
-                            ->searchable()
-                            ->preload()
-                            ->createOptionForm(CompanyForm::fields())
-                            ->editOptionForm(CompanyForm::fields())
                     ]),
+                    TextInput::make('url')
+                        ->nullable()
+                        ->columnSpan(1)
+                        ->url(),
+                    Select::make('company_id')
+                        ->relationship('company', 'name')
+                        ->searchable()
+                        ->preload()
+                        ->createOptionForm(CompanyForm::fields())
+                        ->editOptionForm(CompanyForm::fields()),
                     Textarea::make('description')
                         ->required()
                         ->columnSpanFull(),
@@ -59,7 +63,21 @@ class WorkForm extends Form
                     RichEditor::make('body')
                         ->required()
                         ->fileAttachmentsDirectory('works')
-                        ->columnSpanFull(),
+                        ->fileAttachmentsVisibility('private')
+                        ->toolbarButtons([
+                            'attachFiles',
+                            'bold',
+                            'bulletList',
+                            'codeBlock',
+                            'h3',
+                            'italic',
+                            'link',
+                            'orderedList',
+                            'redo',
+                            'strike',
+                            'underline',
+                            'undo',
+                        ])->columnSpanFull(),
                 ])
         ];
     }

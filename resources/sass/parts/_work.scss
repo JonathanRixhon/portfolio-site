@@ -1,0 +1,105 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+@use "../config/mixins" as mixins;
+
+.work {
+    min-height: 100vh;
+    margin-top: sizes.$gap * 2;
+    background-color: colors.$dark-50;
+    padding: sizes.$gap * 2;
+    border-radius: sizes.$spacer * 2;
+
+    ol,
+    ul {
+        padding-left: sizes.$gap;
+
+        li {
+            padding: 0 0 0 sizes.$s;
+            position: relative;
+            margin: sizes.$spacer 0;
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+
+        ul {
+            list-style-type: disc;
+        }
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    &__container {
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        gap: 6.4257028112%;
+    }
+
+    &__title {
+        font-size: sizes.$xxl;
+        font-weight: 700;
+    }
+
+    &__sidebar {
+        width: 38.5542168675%;
+        line-height: 1.5;
+        position: sticky;
+        top: sizes.$gap * 2;
+
+        .button {
+            margin-top: sizes.$gap * 2;
+        }
+    }
+
+    &__content-wrapper {
+        flex: 1;
+        line-height: 1.5;
+    }
+
+    &__description {
+        margin-bottom: sizes.$gap;
+    }
+
+    &__fig {
+        margin-bottom: sizes.$gap;
+        text-align: center;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: sizes.$spacer;
+        }
+    }
+
+    @media (max-width: sizes.$bp-l) {
+        &__container {
+            display: block;
+        }
+
+        &__title {
+            display: block;
+            margin-bottom: sizes.$gap;
+        }
+
+        &__sidebar {
+            width: 100%;
+            margin-bottom: sizes.$gap * 2;
+            position: static;
+        }
+    }
+
+    @media (max-width: sizes.$bp-s) {
+        &__container {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: sizes.$xxl;
+        }
+    }
+}

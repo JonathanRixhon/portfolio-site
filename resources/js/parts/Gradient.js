@@ -17,7 +17,7 @@ export default class Gradient {
         document.addEventListener('mousemove', (e) => {
             clearTimeout(debounceTimeout);
             debounceTimeout = setTimeout(() => {
-                this.mouseFollow.style.opacity = 1;
+                this.mouseFollow.style.opacity = 0.3;
                 this.updateMouseFollow(e);
             }, 0.1);
         });

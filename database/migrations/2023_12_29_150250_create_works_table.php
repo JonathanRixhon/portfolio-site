@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('url')->nullable();
             $table->text('description');
             $table->longText('body');
             $table->boolean('featured');

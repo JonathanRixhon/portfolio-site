@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WorkController;
 use App\Http\Controllers\WorksController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactSendController;
@@ -19,6 +20,6 @@ use App\Http\Controllers\ContactSendController;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/works', WorksController::class)->name('works');
-Route::get('/works/{work}', function () {return 'hi';})->name('works.show');
+Route::get('/works/{work}', WorkController::class)->name('work');
 Route::get('/contact', ContactController::class)->name('contact');
 Route::post('/contact', ContactSendController::class)->name('contact.send');

@@ -2,13 +2,17 @@
 @use "../config/sizes" as sizes;
 
 .about {
-    margin: 0 auto sizes.$spacer * 20;
+    margin: 0 auto sizes.$gap * 15;
 
     &__container {
         width: 64.8333333333%;
         margin: 0 auto;
         padding-left: sizes.$gap;
         position: relative;
+
+        .wysiwyg {
+            font-size: sizes.$xl;
+        }
 
         &::before {
             content: "";

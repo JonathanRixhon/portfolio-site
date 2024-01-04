@@ -1,6 +1,6 @@
 <article class="work-card">
     <h3 class="work-card__title">{{ $work->name }}</h3>
-    <a href="#" class="work-card__link">See the work</a>
+    <a href="{{ route('work', $work) }}" class="work-card__link">See the work</a>
     <dl class="work-card__disciplines">
         <dt class="sro">Disciplines involved</dt>
         @foreach ($work->disciplines as $discipline)

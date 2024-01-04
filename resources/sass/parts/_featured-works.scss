@@ -2,7 +2,8 @@
 @use "../config/sizes" as sizes;
 
 .featured-works {
-    margin: sizes.$spacer * 10 auto;
+    margin: sizes.$spacer * 10 auto sizes.$gap * 15;
+
     &__header {
         display: flex;
         justify-content: space-between;

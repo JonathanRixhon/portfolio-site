@@ -39,6 +39,7 @@ class TechnologyForm extends Form
                         Select::make('discipline_id')
                             ->relationship('discipline', 'name')
                             ->searchable()
+                            ->required()
                             ->preload()
                             ->createOptionForm(DisciplineForm::fields())
                             ->editOptionForm(DisciplineForm::fields()),

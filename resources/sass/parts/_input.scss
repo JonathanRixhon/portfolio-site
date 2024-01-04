@@ -4,6 +4,7 @@
 .input {
     padding: sizes.$spacer;
     border: 1px solid colors.$secondary;
+    background-color: colors.$dark-50;
     border-radius: 4px;
     display: flex;
     gap: sizes.$spacer;
@@ -46,7 +47,7 @@
 
         &::placeholder {
             font-size: sizes.$m;
-            color: colors.$dark-500;
+            color: colors.$dark-400;
             font-family: "inter", sans-serif;
         }
 
