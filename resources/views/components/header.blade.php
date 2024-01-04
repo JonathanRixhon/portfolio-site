@@ -14,12 +14,12 @@
                 <li class="nav__item">
                     <a href="{{ route('contact') }}" class="nav__link {{ request()->routeIs('contact') ? 'nav__link--current' : ''}}" data-modal="contact-form">Contact</a>
                 </li>
-                {{-- <li class="nav__item nav__item--icon">
-                    <a href="#" class="nav__link nav__link--icon">Linkedin</a>
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link--icon nav__link--github" data-modal="contact-form">Github</a>
                 </li>
-                <li class="nav__item nav__item--icon">
-                    <a href="#" class="nav__link nav__link--icon" data-modal="contact-form">Github</a>
-                </li> --}}
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link--icon nav__link--linkedin">Linkedin</a>
+                </li>
             </ul>
         </div>
     </nav>

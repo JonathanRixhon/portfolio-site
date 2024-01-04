@@ -16,11 +16,24 @@
         gap: sizes.$gap;
     }
 
-    &__item {
+    &__link {
         &--icon {
-            font-family: interbold;
+            font-size: 0;
             &::before {
+                font-size: sizes.$l;
+                color: colors.$dark-700;
                 font-family: 'icons';
+            }
+        }
+
+        &--linkedin {
+            &::before {
+                content: typography.$linkedin;
+            }
+        }
+
+        &--github {
+            &::before {
                 content: typography.$github;
             }
         }
@@ -63,12 +76,6 @@
         &--current::after {
             width: 60%;
         }
-
-        &--icon {
-            &::after {
-                display: none;
-            }
-        }
     }
 
     @media (max-width: sizes.$bp-s) {
@@ -77,6 +84,7 @@
             flex-direction: column;
             padding: sizes.$spacer 0;
         }
+
         &__link {
             padding: sizes.$spacer 0;
             &::after {
@@ -89,6 +97,13 @@
             &__link {
                 font-size: sizes.$s;
                 text-transform: uppercase;
+
+                &--icon {
+                    font-size: 0;
+                    &::before {
+                        font-size: sizes.$s;
+                    }
+                }
             }
         }
     }

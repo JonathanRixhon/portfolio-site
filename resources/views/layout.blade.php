@@ -46,7 +46,7 @@
             {{ session('flash')['message'] }}
         </x-flash>
     @endsession
-    {{-- <x-footer /> --}}
+    <x-footer />
     @cookieconsentview
 </body>
 

@@ -1,5 +1,6 @@
 @use "../config/colors" as colors;
 @use "../config/sizes" as sizes;
+@use "../config/typography" as typography;
 
 .footer {
     &__container {
@@ -9,7 +10,6 @@
         border-top: 1px solid colors.$dark-700;
         display: flex;
         justify-content: space-between;
-        // align-items: center;
     }
 
     &__home-link, &__mailto, &__link {
@@ -33,7 +33,42 @@
         gap: sizes.$spacer;
     }
 
-    &__link{
+    &__link {
         font-size: sizes.$s;
+        &--icon {
+            font-size: 0;
+            &::before {
+                font-size: sizes.$s;
+                color: colors.$dark-700;
+                font-family: 'icons';
+            }
+        }
+
+        &--linkedin {
+            &::before {
+                content: typography.$linkedin;
+            }
+        }
+
+        &--github {
+            &::before {
+                content: typography.$github;
+            }
+        }
+    }
+
+    @media (max-width: sizes.$bp-l) {
+        &__container {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: sizes.$bp-s) {
+        &__header {
+            margin-bottom: sizes.$gap;
+        }
+        &__container {
+            display: block;
+        }
     }
 }

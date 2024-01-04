@@ -1,0 +1,13 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.works {
+    margin-top: sizes.$gap * 2;
+    &__title {
+        font-size: sizes.$xxl;
+        font-weight: 700;
+        width: 66%;
+        margin: 0 auto;
+        margin-bottom: sizes.$spacer * 8;
+    }
+}

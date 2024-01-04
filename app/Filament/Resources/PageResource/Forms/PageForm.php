@@ -89,8 +89,13 @@ class PageForm extends Form
                     TextInput::make('content.about.title')
                         ->required(),
                     RichEditor::make('content.about.body')
-                        ->required(),
-                ]),
+                        ->required()
+                        ->toolbarButtons([
+                            'bold',
+                            'italic',
+                            'link',
+                        ])
+                    ]),
             Section::make('Skills')
                 ->schema([
                     TextInput::make('content.skills.title')

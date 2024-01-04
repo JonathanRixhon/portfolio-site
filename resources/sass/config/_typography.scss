@@ -1,19 +1,8 @@
 @font-face {
-    font-family: interbold;
-    src: url(../../fonts/Inter-Bold.ttf);
-}
-
-// @font-face {
-//     font-family: inter-bold;
-//     src: url(../../fonts/Inter-SemiBold.ttf);
-//     font-weight: bold;
-// }
-
-@font-face {
     font-family: 'icons';
-    src: url(../../fonts/fontello.woff) format('woff'),
-    url(../../fonts/fontello.eot) format('eot'),
-    url(../../fonts/fontello.ttf) format('truetype');
+    src: url(../fonts/fontello.woff) format('woff'),
+    url(../fonts/fontello.eot) format('eot'),
+    url(../fonts/fontello.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
