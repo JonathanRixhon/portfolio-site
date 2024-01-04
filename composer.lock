@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f742ff6bd8f53e7ef7406ddf3723996c",
+    "content-hash": "7f4634cc066c09d1769190d917e361a9",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -5244,6 +5244,81 @@
                 }
             ],
             "time": "2023-07-19T18:55:36+00:00"
+        },
+        {
+            "name": "spatie/laravel-log-dumper",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-log-dumper.git",
+                "reference": "690650194109abe6dca909117477197f86db4752"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-log-dumper/zipball/690650194109abe6dca909117477197f86db4752",
+                "reference": "690650194109abe6dca909117477197f86db4752",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.72|^9.0|^10.0",
+                "illuminate/support": "^8.72|^9.0|^10.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "orchestra/testbench": "^6.23|^7.0|^8.0",
+                "phpunit/phpunit": "^9.4",
+                "spatie/phpunit-snapshot-assertions": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\LogDumper\\LogDumperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\LogDumper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A function to dump anything to the log",
+            "homepage": "https://github.com/spatie/laravel-log-dumper",
+            "keywords": [
+                "laravel-log-dumper",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-log-dumper/issues",
+                "source": "https://github.com/spatie/laravel-log-dumper/tree/1.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-02-15T07:35:11+00:00"
         },
         {
             "name": "spatie/laravel-medialibrary",

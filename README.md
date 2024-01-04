@@ -7,6 +7,7 @@ Run those commands
 ```sh
 cp .env.example .env
 composer install
+php artisan down
 php artisan key:generate
 php artisan migrate
 yarn

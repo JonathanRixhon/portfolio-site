@@ -18,7 +18,7 @@ class PageTableSeeder extends Seeder
                 'hero' => [
                     'welcome' => 'Bonjour, I\'m Jonathan Rixhon',
                     'job' => 'Fullstack developer',
-                    'subtitle' => 'with a big focus on code quality and good practise',
+                    'subtitle' => 'with a big focus on code quality and good practices',
                     'cta' => 'Contact me',
                 ],
                 'works' => [
@@ -27,7 +27,7 @@ class PageTableSeeder extends Seeder
                 ],
                 'about' => [
                     'title' => 'About me',
-                    'body' => 'Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nullam euismod, nisl eget ultricies aliquam, nunc sapien aliquet urna, vitae aliquam nisi nisl vitae nunce.',
+                    'body' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nullam euismod, nisl eget ultricies aliquam, nunc sapien aliquet urna, vitae aliquam nisi nisl vitae nunce.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nullam euismod, nisl eget ultricies aliquam, nunc sapien aliquet urna, vitae aliquam nisi nisl vitae nunce.</p>',
                 ],
                 'skills' => [
                     'title' => 'Skills',
