@@ -20,7 +20,7 @@
         .cookies__btn {
             &--customize {
                 border-top: none;
-                border-bottom: 1px solid colo200;
+                border-bottom: 1px solid colors.$dark-100;
             }
 
             svg {
@@ -43,7 +43,6 @@
         }
 
         .cookies__sections {
-            background-color: red;
             max-height: fit-content;
         }
 
@@ -164,7 +163,7 @@
             color: colors.$dark-950;
             position: relative;
             padding: 1.125em 24px;
-            border-top: 1px solid colo200;
+            border-top: 1px solid colors.$dark-100;
         }
 
         svg {
@@ -174,7 +173,7 @@
 
     &__sections {
         max-height: 450px;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     &__section {
@@ -219,7 +218,7 @@
             width: 2.5em;
             height: 1.4em;
             margin-top: -0.7em;
-            background: colo200;
+            background: colors.$dark-100;
             z-index: 0;
             transition: background 200ms ease-out, opacity 200ms ease-out;
         }
@@ -290,13 +289,13 @@
         display: inline;
         font-weight: 600;
         line-height: 22px;
-        color: #8a8e92;
+        color: colors.$dark-100;
     }
 
     &__duration {
         display: inline;
         text-align: right;
-        color: #8a8e92;
+        color: colors.$dark-100;
     }
 
     &__description {
@@ -305,11 +304,11 @@
         width: 100%;
         line-height: 120%;
         text-align: left;
-        color: #8a8e92;
+        color: colors.$dark-100;
     }
 
     &__save {
-        border-top: 1px solid colo200;
+        border-top: 1px solid colors.$dark-100;
         padding: 0.75em 1.5em;
         margin-top: 0.4em;
         display: flex;
