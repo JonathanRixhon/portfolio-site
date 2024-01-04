@@ -16,18 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        if (env('APP_ENV') !== 'production') {
-            // Work::factory(3)
-            //     ->hasAttached(
-            //         Technology::factory()
-            //             ->for(\App\Models\Discipline::factory())
-            //             ->count(3)
-            //             ->create(),
-            //         [],
-            //         'technologies'
-            //     )->create();
-        }
-
         $this->call([
             PageTableSeeder::class,
         ]);
