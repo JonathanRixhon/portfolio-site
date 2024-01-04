@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('route');
             $table->string('title');
             $table->json('content');
-            $table->json('meta_description');
-            $table->json('meta_og');
-            $table->json('meta_twitter');
+            $table->string('meta_description');
+            $table->string('meta_og');
+            $table->string('meta_twitter');
             $table->timestamps();
         });
     }
