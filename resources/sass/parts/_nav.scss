@@ -4,7 +4,7 @@
 @use "sass:math";
 
 .nav {
-    &__content{
+    &__content {
         width: 83%;
         margin: 0 auto;
         display: flex;
@@ -22,7 +22,7 @@
             &::before {
                 font-size: sizes.$l;
                 color: colors.$dark-950;
-                font-family: 'icons';
+                font-family: "icons";
             }
         }
 
@@ -46,8 +46,10 @@
         display: block;
         position: relative;
 
+
+
         &:hover,
-        &:focus {
+        &:focus-visible {
             &::after {
                 width: 80%;
             }

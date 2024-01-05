@@ -22,7 +22,7 @@
 
     transition: box-shadow 150ms ease;
 
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
         box-shadow: 0px 0px 0px 0px #3f3f46;
     }
 

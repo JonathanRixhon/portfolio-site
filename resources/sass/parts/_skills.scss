@@ -51,7 +51,7 @@
         }
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             &::after {
                 width: 80%;
             }

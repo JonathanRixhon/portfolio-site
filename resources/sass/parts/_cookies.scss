@@ -268,7 +268,7 @@
         transition: color 200ms ease-out;
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             color: colors.$primary;
         }
     }
@@ -342,7 +342,7 @@
         transition: opacity 200ms ease-out;
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             opacity: 0.8;
         }
     }

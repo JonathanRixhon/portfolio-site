@@ -67,8 +67,8 @@
             transform: rotate(-45deg);
         }
 
-        &:focus::before,
-        &:focus::after,
+        &:focus-visible::before,
+        &:focus-visible::after,
         &:hover::before,
         &:hover::after {
             background-color: colors.$secondary;

@@ -166,3 +166,14 @@ body {
         }
     }
 }
+
+@supports selector(div:focus-visible) {
+    /* uniquement au clic/tap focus */
+    *:focus:not(:focus-visible) {
+        box-shadow: none;
+    }
+    /* uniquement au focus clavier */
+    *:focus-visible {
+        box-shadow: inset 0 0 0 2px colors.$secondary !important;
+    }
+}
