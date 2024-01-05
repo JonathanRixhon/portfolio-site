@@ -3,7 +3,7 @@
 @use "../config/mixins" as mixins;
 
 .skills {
-    margin: 0 auto sizes.$gap * 2;
+    margin: sizes.$gap * 10 auto;
 
     &__title {
         font-size: sizes.$xxl;
