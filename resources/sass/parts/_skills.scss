@@ -3,7 +3,7 @@
 @use "../config/mixins" as mixins;
 
 .skills {
-    margin: 0 auto sizes.$gap * 5;
+    margin: 0 auto sizes.$gap * 2;
 
     &__title {
         font-size: sizes.$xxl;
@@ -59,7 +59,7 @@
     }
 
     &__disciplines {
-        min-height: 78px;
+        min-height: 170px;
         position: relative;
     }
 
@@ -96,6 +96,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
+        min-width: 90px;
     }
 
     &__technology-link {
@@ -143,6 +144,11 @@
     @media (max-width: sizes.$bp-s) {
         &__container {
             width: 100%;
+        }
+
+        &__disciplines {
+            min-height: 282px;
+            position: relative;
         }
 
         &__title {
