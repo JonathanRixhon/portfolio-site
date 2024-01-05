@@ -12,7 +12,10 @@ export default class Flash {
             if (this.element.classList.contains('flash--active')) {
                 return;
             }
-            this.element.parentElement.removeChild(this.element);
+
+            if (this.element.parentElement) {
+                this.element.parentElement.removeChild(this.element);
+            }
         });
 
         setTimeout(() => {

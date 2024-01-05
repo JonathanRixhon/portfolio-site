@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Models\Page;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -126,7 +127,7 @@ class PageTemplate
      */
     public function getImage(): string
     {
-        return asset($this->image);
+        return Vite::asset('resources/img/socials.png');
     }
 
     /**
