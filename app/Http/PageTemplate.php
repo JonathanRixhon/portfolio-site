@@ -125,8 +125,11 @@ class PageTemplate
     /**
      * Return the page's social share image
      */
-    public function getImage(): string
+    public function getImage(bool $twitter = false): string
     {
+        if ($twitter) {
+            return Vite::asset('resources/img/socials_small.jpg');
+        }
         return Vite::asset('resources/img/socials.jpg');
     }
 
@@ -156,7 +159,7 @@ class PageTemplate
             'og:url' => $this->getPageUrl(),
             'twitter:description' => $this->page?->meta_twitter ?? null,
             'twitter:title' => $this->getTitle(false),
-            'twitter:image' => $this->getImage(),
+            'twitter:image' => $this->getImage(true),
         ];
 
         $properties = array_merge($defaults, array_filter($this->properties), $extra);
