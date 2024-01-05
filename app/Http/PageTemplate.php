@@ -127,7 +127,7 @@ class PageTemplate
      */
     public function getImage(): string
     {
-        return Vite::asset('resources/img/socials.png');
+        return Vite::asset('resources/img/socials.jpg');
     }
 
     /**
