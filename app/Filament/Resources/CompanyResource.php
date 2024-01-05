@@ -7,9 +7,9 @@ use App\Models\Company;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
-use App\Filament\Resources\CompanyResource\Pages;
-use App\Filament\Resources\DisciplineRescource\Forms\CompanyForm;
 use Filament\Tables\Columns\TextColumn;
+use App\Filament\Resources\CompanyResource\Pages;
+use App\Filament\Resources\CompanyRescource\Forms\CompanyForm;
 
 class CompanyResource extends Resource
 {

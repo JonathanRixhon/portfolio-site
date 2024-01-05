@@ -33,7 +33,9 @@
         filter: blur(150px);
         z-index: -1;
         backface-visibility: hidden;
+        min-width: 300px;
     }
+
     &__mouse-follow {
         width: 200px;
         height: 200px;

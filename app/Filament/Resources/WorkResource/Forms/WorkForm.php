@@ -12,7 +12,7 @@ use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use App\Filament\Resources\DisciplineRescource\Forms\CompanyForm;
+use App\Filament\Resources\CompanyRescource\Forms\CompanyForm;
 
 class WorkForm extends Form
 {

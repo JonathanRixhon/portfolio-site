@@ -50,6 +50,9 @@
         line-height: 1.5;
         position: sticky;
         top: sizes.$gap * 2;
+        max-height: 80vh;
+        overflow: auto;
+        padding-bottom: sizes.$gap * 2;
 
         .button {
             margin-top: sizes.$gap * 2;
@@ -89,6 +92,7 @@
 
         &__sidebar {
             width: 100%;
+            max-height: initial;
             margin-bottom: sizes.$gap * 2;
             position: static;
         }

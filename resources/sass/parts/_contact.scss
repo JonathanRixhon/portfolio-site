@@ -2,14 +2,14 @@
 @use "../config/sizes" as sizes;
 
 .contact {
-    padding-bottom: sizes.$gap * 5;
+    margin: sizes.$gap * 5 auto;
+    padding: sizes.$spacer * 10 0;
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 80vh;
-        padding: 0 auto sizes.$gap * 3;
+        min-height: 30vh;
         width: 66%;
         margin: 0 auto;
     }
