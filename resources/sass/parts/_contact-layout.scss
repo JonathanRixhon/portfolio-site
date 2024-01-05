@@ -1,0 +1,44 @@
+@use "../config/colors" as colors;
+@use "../config/sizes" as sizes;
+
+.contact-layout {
+    margin: sizes.$gap * 10 auto;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 30vh;
+        width: 66%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: sizes.$xxxl;
+        font-weight: 700;
+        margin-bottom: sizes.$gap * 2;
+    }
+
+    &__body {
+        text-align: center;
+        font-size: sizes.$xl;
+        margin-bottom: sizes.$gap * 2;
+    }
+
+    @media (max-width: sizes.$bp-s) {
+        margin: sizes.$gap * 5 auto;
+        &__title {
+            font-size: sizes.$xxl;
+        }
+
+        &__body {
+            font-size: sizes.$l;
+        }
+
+        &__container {
+            width: 100%;
+        }
+    }
+}
