@@ -59,7 +59,7 @@
     }
 
     &__disciplines {
-        min-height: 170px;
+        background-color: red;
         position: relative;
     }
 
@@ -70,10 +70,11 @@
         height: 100%;
         width: 100%;
         opacity: 0;
-        transition: all 0.2s ease;
+        transition: opacity 0.2s ease, transform 0.2s ease;
         transform: translateY(sizes.$spacer * 2);
 
         &--active {
+            position: relative;
             opacity: 1;
             transform: translateY(0);
             z-index: 1;
@@ -123,6 +124,7 @@
     &__technology-image {
         display: block;
         width: auto;
+
         height: 48px;
         max-width: 50px;
         margin-bottom: sizes.$spacer * 2;
