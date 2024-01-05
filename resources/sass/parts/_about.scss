@@ -41,7 +41,9 @@
             width: 100%;
 
             .wysiwyg {
-                font-size: sizes.$l;
+                p {
+                    font-size: sizes.$l;
+                }
             }
         }
 
