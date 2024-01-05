@@ -2,8 +2,9 @@
 @use "../config/sizes" as sizes;
 
 .contact {
-    margin: sizes.$gap * 5 auto;
-    padding: sizes.$spacer * 10 0;
+    margin: sizes.$gap * 10 auto;
+    //padding: sizes.$spacer * 10 0;
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -28,6 +29,7 @@
     }
 
     @media (max-width: sizes.$bp-s) {
+        margin: sizes.$gap * 5 auto;
         &__title {
             font-size: sizes.$xxl;
         }
