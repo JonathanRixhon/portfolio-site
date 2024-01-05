@@ -149,6 +149,7 @@ class PageTemplate
     {
         $defaults = [
             'description' => $this->page?->meta_description ?? null,
+            'keywords' => 'portfolio, developer, fullstack, backend, frontend, web design, web, php, mysql, laravel, vue, javascript, Whitecube, Jonathan Rixhon',
             'og:description' => $this->page?->meta_og ?? null,
             'og:image' => $this->getImage(),
             'og:title' => $this->getTitle(false),
