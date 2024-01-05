@@ -8,10 +8,10 @@
             <p class="hero__subtitle">{{ $content['subtitle'] }}</p>
             <a href="{{ route('contact') }}" class="button" data-modal="contact-form">{{ $content['cta'] }}</a>
         </div>
-        <figure class="hero__fig">
-            @if (isset($content['image']))
-                <img class="hero__img" src="{{ asset(Storage::url($content['image'])) }}" alt="Image of Jonathan">
-            @endif
-        </figure>
+        @if (isset($content['image']))
+            <figure class="hero__fig">
+                <img width="280" height="280" class="hero__img" src="{{ asset(Storage::url($content['image'])) }}" alt="Image of Jonathan">
+            </figure>
+        @endif
     </div>
 </section>
