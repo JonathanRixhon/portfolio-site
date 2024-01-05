@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\DisciplineRescource\Forms;
+namespace App\Filament\Resources\CompanyRescource\Forms;
 
 use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
