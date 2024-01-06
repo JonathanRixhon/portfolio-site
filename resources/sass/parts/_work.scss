@@ -98,6 +98,30 @@
         }
     }
 
+    &__back-wrapper {
+        width: 83%;
+        margin: sizes.$gap auto 0;
+    }
+
+    &__back {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        max-width: 130px;
+
+        &::before {
+            content: "←";
+            margin-right: sizes.$spacer;
+            transition: margin-right 0.2s ease;
+        }
+
+        &:hover {
+            &::before {
+                margin-right: sizes.$spacer * 2;
+            }
+        }
+    }
+
     @media (max-width: sizes.$bp-s) {
         &__container {
             width: 100%;
@@ -105,6 +129,11 @@
 
         &__title {
             font-size: sizes.$xxl;
+        }
+
+        &__back {
+            text-align: right;
+            margin: 0 0 0 auto;
         }
     }
 }

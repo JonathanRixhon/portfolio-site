@@ -28,5 +28,9 @@
                 </div>
             </div>
         </div>
+        <div class="work__back-wrapper">
+            <a href="{{ url()->previous() }}" class="work__back">Go back</a>
+        </div>
+
     </section>
 @endsection
