@@ -10,7 +10,6 @@ use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
-use Barryvdh\Debugbar\Facades\Debugbar;
 use Filament\Infolists\Components\Group;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\IconEntry;
@@ -90,7 +89,7 @@ class WorkResource extends Resource
                                     ->columnSpanFull()
                                     ->html(),
                                 TextEntry::make('company.name')
-                                    ->url(fn ($record) => $record->company->url, true),
+                                    ->url(fn ($record) => $record?->company?->url, true),
                                 IconEntry::make('featured')
                                     ->boolean(),
                                 TextEntry::make('disciplines')
