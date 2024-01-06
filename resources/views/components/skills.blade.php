@@ -22,7 +22,7 @@
                                         {{ $technology->name }}
                                     </a>
                                     <p aria-hidden="true" class="skills__technology-title">{{ $technology->name }}</p>
-                                    <img src="{{ $technology->getFirstMediaUrl('thumbnails') }}" class="skills__technology-image" alt="{{ $technology->name }} logo">
+                                    <img width="48" height="48" src="{{ $technology->getFirstMediaUrl('thumbnails') }}" class="skills__technology-image" alt="{{ $technology->name }} logo">
                                 </li>
                             @endforeach
                         </ul>

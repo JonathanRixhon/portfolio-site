@@ -8,6 +8,6 @@
         @endforeach
     </dl>
     <figure class="work-card__fig">
-        <img class="work-card__img" src="{{ $work->getFirstMediaUrl('thumbnails') }}" alt="Image representing the {{ $work->name }} work">
+        <img width="664" height="378" class="work-card__img" src="{{ $work->getFirstMediaUrl('thumbnails') }}" alt="Image representing the {{ $work->name }} work">
     </figure>
 </article>
