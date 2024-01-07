@@ -4,6 +4,7 @@
         <h2 class="sro">Main Navigation</h2>
         <div class="nav__content">
             <a href="{{ route('home') }}" class="nav__link nav__link--home">Jonathan Rixhon</a>
+            <button data-close="close menu" class="nav__toggle">Open menu</button>
             <ul class="nav__items">
                 <li class="nav__item">
                     <a href="{{ route('home') }}" class="nav__link {{ request()->routeIs('home') ? 'nav__link--current' : ''}}">Home</a>

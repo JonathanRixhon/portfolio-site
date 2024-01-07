@@ -4,6 +4,8 @@ import Gradient from './parts/Gradient';
 import Modals from './parts/Modals';
 import Flash from './parts/Flash';
 import Contact from './parts/Contact';
+import Nav from './parts/Nav';
+
 const modules = import.meta.glob([
     '../favicon/**',
     '../img/**'
@@ -15,6 +17,7 @@ class App {
         let gradient = new Gradient();
         let flash = new Flash();
         let contact = new Contact();
+        let nav = new Nav();
     }
 }
 
