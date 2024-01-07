@@ -1,3 +1,5 @@
+import Nav from "./Nav";
+
 export default class Modal {
     constructor(el) {
         this.modal = el;
@@ -45,6 +47,7 @@ export default class Modal {
 
     openModal() {
         this.modal.classList.add('modal--active')
+        window.app.nav.closeNav();
         this.interactible.forEach((el) => {
             el.setAttribute('tabindex', '0');
         });

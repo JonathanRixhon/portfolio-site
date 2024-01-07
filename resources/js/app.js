@@ -17,7 +17,7 @@ class App {
         let gradient = new Gradient();
         let flash = new Flash();
         let contact = new Contact();
-        let nav = new Nav();
+        this.nav = new Nav();
     }
 }
 
