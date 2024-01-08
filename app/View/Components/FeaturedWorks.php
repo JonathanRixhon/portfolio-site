@@ -19,7 +19,7 @@ class FeaturedWorks extends Component
     public function __construct(array $content = [])
     {
         $this->content = $content;
-        $this->featured = Work::where('featured', true)->get();
+        $this->featured = Work::where('featured', true)->published()->get();
     }
 
     /**

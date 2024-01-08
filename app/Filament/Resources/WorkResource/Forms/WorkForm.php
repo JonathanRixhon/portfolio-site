@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\Concerns\Form;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use App\Filament\Resources\CompanyRescource\Forms\CompanyForm;
 
@@ -36,6 +37,10 @@ class WorkForm extends Form
                         self::titleField(TextInput::make('name'))
                             ->required(),
                         self::slugField('name'),
+                        DateTimePicker::make('published_at')
+                            ->native(false)
+                            ->nullable()
+                            ->weekStartsOnMonday(),
                         Toggle::make('featured')
                             ->required(),
                     ]),

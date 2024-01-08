@@ -18,7 +18,7 @@ class WorksController extends Controller
 
         return view('pages.works', [
             'page' => $template,
-            'works' => Work::with('technologies')->paginate(10),
+            'works' => Work::with('technologies')->published()->orderBy('published_ad', 'DESC')->paginate(10),
             'contact' => Page::where('route', 'contact')->firstOrFail()
         ]);
     }

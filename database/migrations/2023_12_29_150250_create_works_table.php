@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('body');
             $table->boolean('featured');
             $table->uuid('company_id')->nullable();
+            $table->dateTime('published_at')->nullable();
             $table->timestamps();
 
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('set null');
