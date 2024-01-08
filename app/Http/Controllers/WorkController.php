@@ -19,7 +19,7 @@ class WorkController extends Controller
             ->property('og:description', $work->intro)
             ->property('twitter:description', $work->intro);
 
-        if ($work->published_at->gt(now())) abort(404);
+        if ($work->published_at && $work->published_at->gt(now())) abort(404);
 
         return view('pages.work', [
             'page' => $template,
