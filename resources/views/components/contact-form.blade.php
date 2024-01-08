@@ -3,7 +3,7 @@
     <p class="contact-form__subtitle">{{ $contact['subtitle'] }}</p>
     <x-input type="text" name="name" placeholder="John Doe">Full name</x-input>
     <x-input type="email" name="email" placeholder="hello@example.be">E-mail address</x-input>
-    <x-input type="textarea" name="message" placeholder="Dear Jonathan,...">E-mail address</x-input>
+    <x-input type="textarea" name="message" placeholder="Dear Jonathan,...">Message</x-input>
     @csrf
     <button class="button" type="submit">{{ $contact['submit'] }}</button>
 </form>
