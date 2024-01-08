@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
@@ -18,7 +19,7 @@ use App\Filament\Resources\DisciplineRescource\Forms\DisciplineForm;
 
 class TechnologyForm extends Form
 {
-    public static function fields(null|Model $record=null): array
+    public static function fields(null|Model $record = null): array
     {
         return [
             Section::make('General informations')
@@ -43,6 +44,8 @@ class TechnologyForm extends Form
                             ->preload()
                             ->createOptionForm(DisciplineForm::fields())
                             ->editOptionForm(DisciplineForm::fields()),
+                        Toggle::make('featured')
+                            ->required(),
                     ]),
                     TextInput::make('url')
                         ->url()

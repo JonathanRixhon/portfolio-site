@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('url');
+            $table->string('order')->default(0);
+            $table->boolean('featured');
             $table->uuid('discipline_id');
             $table->timestamps();
 

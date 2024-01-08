@@ -16,6 +16,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "mcamara/laravel-localization": "^1.8",
+        "spatie/eloquent-sortable": "^4.1",
         "spatie/laravel-log-dumper": "^1.4",
         "spatie/laravel-medialibrary": "^11.0",
         "whitecube/laravel-cookie-consent": "^1.1"

@@ -26,6 +26,8 @@ class TechnologyResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->reorderable('order')
+            ->defaultSort('order')
             ->columns([
                 SpatieMediaLibraryImageColumn::make('thumbnail')
                     ->collection('thumbnails'),
