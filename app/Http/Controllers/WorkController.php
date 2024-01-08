@@ -19,10 +19,14 @@ class WorkController extends Controller
             ->property('og:description', $work->intro)
             ->property('twitter:description', $work->intro);
 
+        $page = Page::where('route', 'contact')->published()->firstOrFail();
+
+        if(!$page) abort(404);
+
         return view('pages.work', [
             'page' => $template,
             'work' => $work->load('technologies'),
-            'contact' => Page::where('route', 'contact')->published()->firstOrFail(),
+            'contact' => $page,
         ]);
     }
 }
