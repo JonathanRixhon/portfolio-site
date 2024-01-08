@@ -19,9 +19,14 @@ class Skills extends Component
     public function __construct(array $content = [])
     {
         $this->content = $content;
-        $this->disciplines = Discipline::whereHas('technologies', function ($query) {
-            $query->ordered()->featured();
-        })
+        $this->disciplines = Discipline::with([
+            'technologies' => function ($query) {
+                $query->ordered();
+            }
+        ])
+            ->whereHas('technologies', function ($query) {
+                $query->featured();
+            })
             ->ordered()
             ->get();
     }
