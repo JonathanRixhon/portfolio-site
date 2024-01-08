@@ -29,20 +29,5 @@ class ListTechnologies extends ListRecords
                     }),
             ];
         })->all();
-        // return [
-        //     'all' => Tab::make('All Talks'),
-        //     'approved' => Tab::make('Approved')
-        //         ->query(function ($query) {
-        //             $query->where('status', TalkStatus::APPROVED);
-        //         }),
-        //     'submitted' => Tab::make('Submitted')
-        //         ->query(function ($query) {
-        //             $query->where('status', TalkStatus::SUBMITTED);
-        //         }),
-        //     'rejected' => Tab::make('Rejected')
-        //         ->query(function ($query) {
-        //             $query->where('status', TalkStatus::REJECTED);
-        //         }),
-        // ];
     }
 }
