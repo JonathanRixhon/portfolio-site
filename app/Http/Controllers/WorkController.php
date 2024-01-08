@@ -22,7 +22,7 @@ class WorkController extends Controller
         return view('pages.work', [
             'page' => $template,
             'work' => $work->load('technologies'),
-            'contact' => Page::where('route', 'contact')->firstOrFail(),
+            'contact' => Page::where('route', 'contact')->published()->firstOrFail(),
         ]);
     }
 }
